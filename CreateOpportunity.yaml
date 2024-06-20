@@ -1,0 +1,988 @@
+type: object
+properties:
+  AccountId:
+    type: string
+    description: Account ID
+  Amount:
+    type: number
+    description: Amount (do not use)
+  CampaignId:
+    type: string
+    description: Campaign ID
+  CloseDate:
+    type: string
+    format: date
+    description: Close Date
+  ContactId:
+    type: string
+    description: Contact ID
+  ContractId:
+    type: string
+    description: Contract ID
+  CreatedById:
+    type: string
+    description: Created By ID
+  CreatedDate:
+    type: string
+    format: date-time
+    description: Created Date
+  CventEvents__Attendee__c:
+    type: string
+    description: Attendee
+  CventEvents__Event__c:
+    type: string
+    description: Cvent Event Number
+  CventEvents__EventTitle__c:
+    type: string
+    description: Cvent Event
+  Description:
+    type: string
+    description: Description
+  ExpectedRevenue:
+    type: number
+    description: Expected Amount
+  Fiscal:
+    type: string
+    description: Fiscal Period
+  FiscalQuarter:
+    type: integer
+    description: Fiscal Quarter
+  FiscalYear:
+    type: integer
+    description: Fiscal Year
+  ForecastCategory:
+    type: string
+    description: Forecast Category
+  ForecastCategoryName:
+    type: string
+    description: Forecast Category Name
+  HasOpenActivity:
+    type: boolean
+    description: Has Open Activity
+  HasOpportunityLineItem:
+    type: boolean
+    description: Has Line Item
+  HasOverdueTask:
+    type: boolean
+    description: Has Overdue Task
+  Id:
+    type: string
+    description: Opportunity ID
+  IqScore:
+    type: number
+    description: Opportunity Score
+  IsClosed:
+    type: boolean
+    description: Closed
+  IsDeleted:
+    type: boolean
+    description: Deleted
+  IsPrivate:
+    type: boolean
+    description: Private
+  IsSplit:
+    type: boolean
+    description: Is Split
+  IsWon:
+    type: boolean
+    description: Won
+  LastActivityDate:
+    type: string
+    format: date
+    description: Last Activity
+  LastModifiedById:
+    type: string
+    description: Last Modified By ID
+  LastModifiedDate:
+    type: string
+    format: date-time
+    description: Last Modified Date
+  LastReferencedDate:
+    type: string
+    format: date-time
+    description: Last Referenced Date
+  LastViewedDate:
+    type: string
+    format: date-time
+    description: Last Viewed Date
+  LeadSource:
+    type: string
+    description: Lead Source
+  Name:
+    type: string
+    description: Name
+  Need_Products_for_One_Fox__c:
+    type: string
+    description: Need Products for OneFOX
+  NextStep:
+    type: string
+    description: Next Step
+  OwnerId:
+    type: string
+    description: Owner ID
+  P2P_AATS_Count__c:
+    type: integer
+    description: AATS Count
+  P2P_Account_Manager__c:
+    type: string
+    description: Account Manager
+  P2P_Account_Manager_Active__c:
+    type: boolean
+    description: Account Manager Active
+  P2P_Ad_Versioning__c:
+    type: string
+    description: Ad Versioning
+  P2P_Advanced_Ad_Products_Proposed__c:
+    type: string
+    description: Advanced Ad Products Proposed
+  P2P_Advanced_Audience_Targeting__c:
+    type: string
+    description: Advanced Audience Targeting
+  P2P_Advertiser_Active__c:
+    type: boolean
+    description: Advertiser Active
+  P2P_Agency__c:
+    type: string
+    description: Agency
+  P2P_Agency_Coverage__c:
+    type: string
+    description: Tubi Agency Coverage
+  P2P_Agency_Is_Active__c:
+    type: boolean
+    description: Agency IsActive
+  P2P_AIM_Type__c:
+    type: string
+    description: AIM Type
+  P2P_Amount__c:
+    type: number
+    description: Projected Amount (do not use)
+  P2P_Amount_Net__c:
+    type: number
+    description: Projected Amount (Net)
+  P2P_Ancillary_Budget__c:
+    type: number
+    description: Ancillary Budget
+  P2P_Anticipated_Digital__c:
+    type: number
+    description: Anticipated Digital
+  P2P_Anticipated_Linear__c:
+    type: number
+    description: Anticipated Linear
+  P2P_Anticipated_Social__c:
+    type: number
+    description: Anticipated Social
+  P2P_AOS_Digital_ID__c:
+    type: string
+    description: AOS Digital ID
+  P2P_AOS_Digital_Sync_Comments__c:
+    type: string
+    description: AOS Digital Sync Comments
+  P2P_AOS_Digital_Sync_Notified__c:
+    type: boolean
+    description: AOS Digital Sync Notified
+  P2P_Barter_Discount__c:
+    type: number
+    description: Barter Discount
+  P2P_Barter_Percent__c:
+    type: number
+    description: Barter Percent
+  P2P_BP_Amount__c:
+    type: number
+    description: Projected Amount (Gross)
+  P2P_BP_Network__c:
+    type: string
+    description: BP Network
+  P2P_Broadway_Deal_ID__c:
+    type: string
+    description: Broadway Deal ID
+  P2P_Business_Segment__c:
+    type: string
+    description: Business Segment
+  P2P_Conceptual_Deal_Year_Formula__c:
+    type: string
+    description: Conceptual Deal Year
+  P2P_Conceptual_Status__c:
+    type: string
+    description: Conceptual Status
+  P2P_Copy_Header_Opportunity__c:
+    type: string
+    description: Copy Header Opportunity
+  P2P_Cost_to_Produce__c:
+    type: number
+    description: Cost to Produce
+  P2P_CPM__c:
+    type: number
+    description: CPM
+  P2P_Critical__c:
+    type: boolean
+    description: Critical
+  P2P_Custom_Content__c:
+    type: string
+    description: Custom Content
+  P2P_Custom_Research__c:
+    type: string
+    description: Custom Research
+  P2P_Customer_Type__c:
+    type: string
+    description: Customer Type
+  P2P_Daypart__c:
+    type: string
+    description: Daypart
+  P2P_Daypart_From_Products__c:
+    type: string
+    description: Daypart From Products
+  P2P_Days_Open__c:
+    type: integer
+    description: Days Open
+  P2P_Deal_ID__c:
+    type: string
+    description: Deal ID
+  P2P_Deal_Type__c:
+    type: string
+    description: Deal Type
+  P2P_Demo__c:
+    type: string
+    description: Demo
+  P2P_Devices__c:
+    type: string
+    description: Devices
+  P2P_Digital_BTN_Product_Count__c:
+    type: integer
+    description: Digital BTN Product Count
+  P2P_Digital_Product_Count__c:
+    type: integer
+    description: Digital Product Count
+  P2P_Digital_Product_Count_Clone__c:
+    type: integer
+    description: Digital Product Count Clone
+  P2P_Digital_Sync_Notified__c:
+    type: boolean
+    description: Digital Sync Notified
+  P2P_Digital_Upfront_Base__c:
+    type: number
+    description: Digital Upfront Base
+  P2P_Direct_Response__c:
+    type: string
+    description: Direct Response
+  P2P_Direct_to_Client__c:
+    type: string
+    description: Direct to Client
+  P2P_Discovery_Completed__c:
+    type: boolean
+    description: Discovery Completed
+  P2P_Draft_Category__c:
+    type: string
+    description: Draft Category
+  P2P_DSP__c:
+    type: string
+    description: DSP
+  P2P_Exclusivities__c:
+    type: string
+    description: Exclusivities
+  P2P_Expansion__c:
+    type: boolean
+    description: Expansion
+  P2P_Extended_Amount_Gross__c:
+    type: number
+    description: Extended Amount (Gross)
+  P2P_Extended_Amount_Net__c:
+    type: number
+    description: Extended Amount (Net)
+  P2P_Extended_Budget__c:
+    type: number
+    description: Extended Budget
+  P2P_Flight_End_Date__c:
+    type: string
+    format: date
+    description: Flight End Date
+  P2P_Flight_Start_Date__c:
+    type: string
+    format: date
+    description: Flight Start Date
+  P2P_Fluidity_HULU__c:
+    type: boolean
+    description: Fluidity - HULU
+  P2P_Fluidity_HULU_Last_Year__c:
+    type: boolean
+    description: Fluidity - HULU Last Year
+  P2P_Fluidity_Other__c:
+    type: boolean
+    description: Fluidity - Other
+  P2P_Fluidity_Other_Last_Year__c:
+    type: boolean
+    description: Fluidity - Other Last Year
+  P2P_Fluidity_VOD__c:
+    type: boolean
+    description: Fluidity - VOD
+  P2P_Fluidity_VOD_Last_Year__c:
+    type: boolean
+    description: Fluidity - VOD Last Year
+  P2P_Fox_Central_ID__c:
+    type: string
+    description: Fox Central ID
+  P2P_Foxipedia_Advertiser_ID__c:
+    type: string
+    description: Foxipedia Advertiser ID
+  P2P_Foxipedia_Agency_ID__c:
+    type: string
+    description: Foxipedia Agency ID
+  P2P_Guaranteed__c:
+    type: boolean
+    description: Guaranteed
+  P2P_Guaranteed_CPM__c:
+    type: number
+    description: Guaranteed CPM
+  P2P_Guaranteed_Impressions__c:
+    type: number
+    description: Guaranteed Impressions
+  P2P_Hold_Archive__c:
+    type: boolean
+    description: Hold Archive
+  P2P_Hold_Archive_OLD__c:
+    type: boolean
+    description: Hold Archive OLD
+  P2P_Holding_Company__c:
+    type: string
+    description: Holding Company
+  P2P_Is_One_Fox__c:
+    type: boolean
+    description: Is OneFOX
+  P2P_KPI__c:
+    type: string
+    description: KPI
+  P2P_KPI_Details__c:
+    type: string
+    description: KPI Details
+  P2P_KPI_Objective__c:
+    type: string
+    description: KPI / Objective
+  P2P_Last_synced_by__c:
+    type: string
+    description: Last Synced By
+  P2P_Last_Synced_Date__c:
+    type: string
+    format: date-time
+    description: Last Synced Date & Time
+  P2P_Linear_Product_Count__c:
+    type: integer
+    description: Linear Product Count
+  P2P_Linear_Product_Count_Clone__c:
+    type: integer
+    description: Linear Product Count Clone
+  P2P_Long_Term_Deal__c:
+    type: boolean
+    description: Long Term Deal
+  P2P_Marketing_Event__c:
+    type: string
+    description: Marketing Event
+  P2P_Marketplace__c:
+    type: string
+    description: Marketplace
+  P2P_Network__c:
+    type: string
+    description: Network
+  P2P_Network_Daypart__c:
+    type: string
+    description: Primary Property
+  P2P_Network_From_Products__c:
+    type: string
+    description: Network From Products
+  P2P_Next_FY_Clone__c:
+    type: string
+    description: Next FY Clone
+  P2P_Next_FY_Opportunity__c:
+    type: string
+    description: Next FY Opportunity
+  P2P_Null_Sold_CPM_Count__c:
+    type: integer
+    description: Null Sold CPM Count
+  P2P_Old_Stage_Value__c:
+    type: string
+    description: Old Stage Value
+  P2P_OP1_SO_ID__c:
+    type: string
+    description: OP1 SO ID
+  P2P_OP1_Sync_Comments__c:
+    type: string
+    description: Digital Sync Comments
+  P2P_Operative_Id__c:
+    type: string
+    description: AOS Plan ID
+  P2P_Opp_Deal_Year__c:
+    type: string
+    description: Deal Year
+  P2P_Opp_Line_Item_count__c:
+    type: integer
+    description: Opp Line Item count
+  P2P_Opp_Line_Item_Count_Clone__c:
+    type: integer
+    description: Opp Line Item Count Clone
+  P2P_Opportunity_Bridge_ID__c:
+    type: string
+    description: Opportunity Bridge ID
+  P2P_Opportunity_for_Brand_Partnership__c:
+    type: string
+    description: Partnership/Sponsorship
+  P2P_Opportunity_ID_18__c:
+    type: string
+    description: Opportunity ID (18)
+  P2P_Opportunity_Unique_ID__c:
+    type: string
+    description: Opportunity Unique ID
+  P2P_Order_Archive__c:
+    type: string
+    description: Order Archive (Gross)
+  P2P_Order_Archive_Net__c:
+    type: string
+    description: Order Archive (Net) OLD Formula
+  P2P_Order_Archive_Net_Roll__c:
+    type: string
+    description: Order Archive (Net)
+  P2P_Order_OLD__c:
+    type: string
+    description: Order Archive OLD
+  P2P_Override_Agency_Commission__c:
+    type: boolean
+    description: Override Agency Commission
+  P2P_P2_CPM__c:
+    type: number
+    description: P2+ CPM
+  P2P_Paid_Unit__c:
+    type: string
+    description: Paid Unit
+  P2P_Parent_Agency__c:
+    type: string
+    description: Parent Agency
+  P2P_Partnership_Platform__c:
+    type: string
+    description: Partnership Platform
+  P2P_Plan_Amount__c:
+    type: number
+    description: Plan Amount (Gross)
+  P2P_Plan_Amount_OLD__c:
+    type: number
+    description: Plan Amount (Gross) OLD
+  P2P_Plan_Mismatch_Count__c:
+    type: integer
+    description: Plan Mismatch Count
+  P2P_Platform__c:
+    type: string
+    description: Platform
+  P2P_PMP_Type__c:
+    type: string
+    description: PMP Type
+  P2P_PRG_AOS_Digital_ID__c:
+    type: string
+    description: PRG AOS Digital ID
+  P2P_PRG_AOS_Sync_Comments__c:
+    type: string
+    description: PRG AOS Sync Comments
+  P2P_Pricing_Goal__c:
+    type: string
+    description: Pricing Goal
+  P2P_Prior_Year_Linear_Score__c:
+    type: number
+    description: Prior Year Linear Score
+  P2P_Prior_Year_Order_Archive__c:
+    type: number
+    description: Prior Year Order Archive
+  P2P_Prior_Year_Plan_Index__c:
+    type: number
+    description: Prior Year Plan Index
+  P2P_Prior_Year_Quintile__c:
+    type: string
+    description: Prior Year Quintile
+  P2P_Prior_Year_Upfront_Base_Gross__c:
+    type: number
+    description: Prior Year Upfront Base (Gross)
+  P2P_Prior_Year_Upfront_Base_Gross_Roll__c:
+    type: number
+    description: Prior Year Upfront Base (Gross) Roll
+  P2P_Prior_Year_Upfront_Base_Net__c:
+    type: number
+    description: Prior Year Upfront Base (Net)
+  P2P_Program__c:
+    type: string
+    description: Program
+  P2P_Property_Type_Migration__c:
+    type: string
+    description: Property Type Migration
+  P2P_Proposal_Amount__c:
+    type: number
+    description: Proposal Amount
+  P2P_Proposal_Due_Date__c:
+    type: string
+    format: date
+    description: Proposal Due Date
+  P2P_Proposal_Sent_Date__c:
+    type: string
+    format: date
+    description: Proposal Sent Date
+  P2P_Proposal_Status__c:
+    type: string
+    description: Proposal Status
+  P2P_Psychographic_Information__c:
+    type: string
+    description: Psychographic Information
+  P2P_PY_Upfront_Base_Gross__c:
+    type: number
+    description: PY Upfront Base Gross
+  P2P_Quarter_Closed__c:
+    type: string
+    description: Quarter Closed
+  P2P_Quarterly_Dollar_Count__c:
+    type: integer
+    description: Quarterly Dollar Count
+  P2P_RA_Rollup__c:
+    type: string
+    description: RA Rollup
+  P2P_Rating_Source__c:
+    type: string
+    description: Rating Source
+  P2P_Rating_Type__c:
+    type: string
+    description: Rating Type
+  P2P_Reason_Lost__c:
+    type: string
+    description: Reason Lost
+  P2P_Reason_Lost_Notes__c:
+    type: string
+    description: Reason Lost Notes
+  P2P_Registered_Ancillary_Budget__c:
+    type: number
+    description: Registered Ancillary Budget
+  P2P_Registered_Media_Budget__c:
+    type: number
+    description: Registered Media Budget
+  P2P_Related_Opportunity__c:
+    type: string
+    description: Related Opportunity
+  P2P_Reported_Amount_Net__c:
+    type: number
+    description: Reported Amount (Net) OLD2
+  P2P_Reported_Amount_Net_OLD__c:
+    type: number
+    description: Reported Amount (Net) OLD
+  P2P_Reported_Opportunity_Amount__c:
+    type: number
+    description: Reported Amount (Gross)
+  P2P_Reported_Opportunity_Amount_Net__c:
+    type: number
+    description: Reported Amount (Net)
+  P2P_Reported_Opportunity_Amount_OLD__c:
+    type: number
+    description: Reported Amount (Gross) OLD
+  P2P_Response_Type__c:
+    type: string
+    description: Response Type
+  P2P_RFP_Category__c:
+    type: string
+    description: RFP Category
+  P2P_RFP_Receipt_Date__c:
+    type: string
+    format: date
+    description: RFP Receipt Date
+  P2P_SE_PMP_Count__c:
+    type: integer
+    description: S&E PMP Count
+  P2P_Season_ID__c:
+    type: string
+    description: Season ID
+  P2P_Secondary_KPI__c:
+    type: string
+    description: Secondary KPI
+  P2P_Segment__c:
+    type: string
+    description: Segment
+  P2P_Sports_Included__c:
+    type: string
+    description: Sports Included
+  P2P_SSP__c:
+    type: string
+    description: SSP
+  P2P_Sync_Comments__c:
+    type: string
+    description: Sync Comments
+  P2P_Sync_Notified__c:
+    type: boolean
+    description: Sync Notified
+  P2P_Synced_from_Plan_System__c:
+    type: boolean
+    description: Synced from Plan System
+  P2P_Syncing__c:
+    type: boolean
+    description: Syncing
+  P2P_TMZ_Sales_Category__c:
+    type: string
+    description: TMZ Sales Category
+  P2P_TMZ_SFDC_ID_18__c:
+    type: string
+    description: TMZ SFDC ID (18)
+  P2P_Total_Budgeted_Amount_Gross__c:
+    type: number
+    description: Products Projected Amount (Gross)
+  P2P_Total_Budgeted_Amount_Gross_OLD__c:
+    type: number
+    description: Projected Amount (Gross) OLD
+  P2P_Total_Budgeted_Amount_Net__c:
+    type: number
+    description: Products Projected Amount (Net)
+  P2P_Total_Budgeted_Amount_Net_OLD__c:
+    type: number
+    description: Projected Amount (Net) OLD
+  P2P_Total_Fluidity__c:
+    type: number
+    description: Total Fluidity
+  P2P_Total_Fluidity_Clone__c:
+    type: number
+    description: Total Fluidity Clone
+  P2P_Total_Media_Buy__c:
+    type: number
+    description: Total Media Buy (Gross)
+  P2P_Total_Media_Buy_Net__c:
+    type: number
+    description: Total Media Buy (Net)
+  P2P_Total_Plan_Amount_Net__c:
+    type: number
+    description: Plan Amount (Net)
+  P2P_Total_Plan_Amount_Net_OLD__c:
+    type: number
+    description: Plan Amount (Net) OLD
+  P2P_Tubi_Billing_Schedule__c:
+    type: string
+    description: Tubi Billing Schedule
+  P2P_Tubi_Digital_Product_Count__c:
+    type: integer
+    description: Tubi Digital Product Count
+  P2P_Tubi_Key_Account__c:
+    type: string
+    description: Tubi Key Account
+  P2P_Tubi_Payment_Term__c:
+    type: string
+    description: Tubi Payment Term
+  P2P_Tubi_Primary_Contact_Created__c:
+    type: boolean
+    description: Tubi Primary Contact Created
+  P2P_Tubi_SFDC_ID_18__c:
+    type: string
+    description: Tubi SFDC ID (18)
+  P2P_TV_Digital_Integrated_Deal__c:
+    type: boolean
+    description: TV / Digital Integrated Deal
+  P2P_Update_Amount_Gross__c:
+    type: number
+    description: Update Amount (Gross)
+  P2P_Update_Amount_Gross_on_Opp__c:
+    type: number
+    description: Update Amount (Gross) on Opp
+  P2P_Update_Amount_Net_Cross__c:
+    type: number
+    description: Update Amount (Net) Cross
+  P2P_Update_Amount_Net_on_Opp__c:
+    type: number
+    description: Update Amount (Net) on Opp
+  P2P_Upfront_Clone__c:
+    type: string
+    description: Upfront Clone
+  P2P_Upfront_Incremental__c:
+    type: number
+    description: Upfront Incremental
+  P2P_User_is_Account_Manager__c:
+    type: boolean
+    description: User is Account Manager
+  P2P_Versioning_Notes__c:
+    type: string
+    description: Versioning Notes
+  P2P_Viewability_Guaranteed__c:
+    type: boolean
+    description: Viewability Guaranteed
+  P2P_Viewability_Type__c:
+    type: string
+    description: Viewability Type
+  P2P_Weighted_Revenue__c:
+    type: number
+    description: Weighted Revenue
+  P2P_Weighted_Revenue_Net__c:
+    type: number
+    description: Weighted Revenue (Net)
+  PartnerAccountId:
+    type: string
+    description: Partner Account ID
+  Pricebook2Id:
+    type: string
+    description: Price Book ID
+  Probability:
+    type: number
+    description: Probability (%)
+  RecordTypeId:
+    type: string
+    description: Record Type ID
+  RepAmt_DNU__c:
+    type: number
+    description: RepAmt DNU
+  SourceId:
+    type: string
+    description: Source ID
+  StageName:
+    type: string
+    description: Stage
+  SyncedQuoteId:
+    type: string
+    description: Quote ID
+  SystemModstamp:
+    type: string
+    format: date-time
+    description: System Modstamp
+  TotalOpportunityQuantity:
+    type: number
+    description: Quantity
+  Type:
+    type: string
+    description: Vertical
+  X2021_Clone__c:
+    type: string
+    description: 2021 Clone
+example:
+  AccountId: "0012w00000AWgcGAAT"
+  Amount: 150000.00
+  CampaignId: "7012w000001N2kHAAS"
+  CloseDate: "2024-06-30"
+  ContactId: "0032w00000FWJSmAAP"
+  ContractId: "8002w000000P8AXAA0"
+  CreatedById: "0052w00000C3f8jAAB"
+  CreatedDate: "2024-01-01T12:00:00Z"
+  CventEvents__Attendee__c: "John Doe"
+  CventEvents__Event__c: "EVT-12345"
+  CventEvents__EventTitle__c: "Annual Sales Conference"
+  Description: "This is a sample opportunity description."
+  ExpectedRevenue: 200000.00
+  Fiscal: "Q3"
+  FiscalQuarter: 3
+  FiscalYear: 2024
+  ForecastCategory: "Pipeline"
+  ForecastCategoryName: "Pipeline"
+  HasOpenActivity: true
+  HasOpportunityLineItem: true
+  HasOverdueTask: false
+  Id: "0062w00000J5W58AAF"
+  IqScore: 85.5
+  IsClosed: false
+  IsDeleted: false
+  IsPrivate: false
+  IsSplit: false
+  IsWon: false
+  LastActivityDate: "2024-06-15"
+  LastModifiedById: "0052w00000C3f8jAAB"
+  LastModifiedDate: "2024-06-15T14:30:00Z"
+  LastReferencedDate: "2024-06-15T14:30:00Z"
+  LastViewedDate: "2024-06-15T14:30:00Z"
+  LeadSource: "Web"
+  Name: "Big Deal Opportunity"
+  Need_Products_for_One_Fox__c: "Yes"
+  NextStep: "Schedule follow-up meeting"
+  OwnerId: "0052w00000C3f8jAAB"
+  P2P_AATS_Count__c: 5
+  P2P_Account_Manager__c: "Jane Smith"
+  P2P_Account_Manager_Active__c: true
+  P2P_Ad_Versioning__c: "Version 1.0"
+  P2P_Advanced_Ad_Products_Proposed__c: "Advanced Product A"
+  P2P_Advanced_Audience_Targeting__c: "Target Group A"
+  P2P_Advertiser_Active__c: true
+  P2P_Agency__c: "XYZ Agency"
+  P2P_Agency_Coverage__c: "National"
+  P2P_Agency_Is_Active__c: true
+  P2P_AIM_Type__c: "Type A"
+  P2P_Amount__c: 250000.00
+  P2P_Amount_Net__c: 230000.00
+  P2P_Ancillary_Budget__c: 50000.00
+  P2P_Anticipated_Digital__c: 120000.00
+  P2P_Anticipated_Linear__c: 80000.00
+  P2P_Anticipated_Social__c: 50000.00
+  P2P_AOS_Digital_ID__c: "DIG-001"
+  P2P_AOS_Digital_Sync_Comments__c: "Synced successfully"
+  P2P_AOS_Digital_Sync_Notified__c: true
+  P2P_Barter_Discount__c: 5.0
+  P2P_Barter_Percent__c: 10.0
+  P2P_BP_Amount__c: 300000.00
+  P2P_BP_Network__c: "Network A"
+  P2P_Broadway_Deal_ID__c: "BROAD-001"
+  P2P_Business_Segment__c: "Segment A"
+  P2P_Conceptual_Deal_Year_Formula__c: "2024"
+  P2P_Conceptual_Status__c: "Pending"
+  P2P_Copy_Header_Opportunity__c: "Header Copy"
+  P2P_Cost_to_Produce__c: 10000.00
+  P2P_CPM__c: 15.5
+  P2P_Critical__c: true
+  P2P_Custom_Content__c: "Custom Ad Content"
+  P2P_Custom_Research__c: "Research A"
+  P2P_Customer_Type__c: "Type B"
+  P2P_Daypart__c: "Primetime"
+  P2P_Daypart_From_Products__c: "Product A"
+  P2P_Days_Open__c: 45
+  P2P_Deal_ID__c: "DEAL-001"
+  P2P_Deal_Type__c: "Type A"
+  P2P_Demo__c: "Demo A"
+  P2P_Devices__c: "Mobile"
+  P2P_Digital_BTN_Product_Count__c: 3
+  P2P_Digital_Product_Count__c: 5
+  P2P_Digital_Product_Count_Clone__c: 5
+  P2P_Digital_Sync_Notified__c: true
+  P2P_Digital_Upfront_Base__c: 100000.00
+  P2P_Direct_Response__c: "Direct Response A"
+  P2P_Direct_to_Client__c: "Client A"
+  P2P_Discovery_Completed__c: true
+  P2P_Draft_Category__c: "Category A"
+  P2P_DSP__c: "DSP A"
+  P2P_Exclusivities__c: "Exclusivity A"
+  P2P_Expansion__c: true
+  P2P_Extended_Amount_Gross__c: 350000.00
+  P2P_Extended_Amount_Net__c: 330000.00
+  P2P_Extended_Budget__c: 70000.00
+  P2P_Flight_End_Date__c: "2024-12-31"
+  P2P_Flight_Start_Date__c: "2024-07-01"
+  P2P_Fluidity_HULU__c: true
+  P2P_Fluidity_HULU_Last_Year__c: false
+  P2P_Fluidity_Other__c: true
+  P2P_Fluidity_Other_Last_Year__c: false
+  P2P_Fluidity_VOD__c: true
+  P2P_Fluidity_VOD_Last_Year__c: false
+  P2P_Fox_Central_ID__c: "FOX-001"
+  P2P_Foxipedia_Advertiser_ID__c: "ADV-001"
+  P2P_Foxipedia_Agency_ID__c: "AGY-001"
+  P2P_Guaranteed__c: true
+  P2P_Guaranteed_CPM__c: 18.5
+  P2P_Guaranteed_Impressions__c: 1000000
+  P2P_Hold_Archive__c: true
+  P2P_Hold_Archive_OLD__c: false
+  P2P_Holding_Company__c: "Holding Company A"
+  P2P_Is_One_Fox__c: true
+  P2P_KPI__c: "KPI A"
+  P2P_KPI_Details__c: "KPI Details A"
+  P2P_KPI_Objective__c: "Objective A"
+  P2P_Last_synced_by__c: "User A"
+  P2P_Last_Synced_Date__c: "2024-06-15T14:30:00Z"
+  P2P_Linear_Product_Count__c: 3
+  P2P_Linear_Product_Count_Clone__c: 3
+  P2P_Long_Term_Deal__c: true
+  P2P_Marketing_Event__c: "Event A"
+  P2P_Marketplace__c: "Marketplace A"
+  P2P_Network__c: "Network A"
+  P2P_Network_Daypart__c: "Primetime"
+  P2P_Network_From_Products__c: "Product A"
+  P2P_Next_FY_Clone__c: "Clone A"
+  P2P_Next_FY_Opportunity__c: "Opportunity A"
+  P2P_Null_Sold_CPM_Count__c: 0
+  P2P_Old_Stage_Value__c: "Stage A"
+  P2P_OP1_SO_ID__c: "SO-001"
+  P2P_OP1_Sync_Comments__c: "Sync Comment A"
+  P2P_Operative_Id__c: "OP-001"
+  P2P_Opp_Deal_Year__c: "2024"
+  P2P_Opp_Line_Item_count__c: 10
+  P2P_Opp_Line_Item_Count_Clone__c: 10
+  P2P_Opportunity_Bridge_ID__c: "Bridge A"
+  P2P_Opportunity_for_Brand_Partnership__c: "Partnership A"
+  P2P_Opportunity_ID_18__c: "OPP-0018"
+  P2P_Opportunity_Unique_ID__c: "UNIQUE-001"
+  P2P_Order_Archive__c: "Order A"
+  P2P_Order_Archive_Net__c: "Order Net A"
+  P2P_Order_Archive_Net_Roll__c: "Order Net Roll A"
+  P2P_Order_OLD__c: "Order OLD A"
+  P2P_Override_Agency_Commission__c: true
+  P2P_P2_CPM__c: 20.0
+  P2P_Paid_Unit__c: "Unit A"
+  P2P_Parent_Agency__c: "Parent Agency A"
+  P2P_Partnership_Platform__c: "Platform A"
+  P2P_Plan_Amount__c: 400000.00
+  P2P_Plan_Amount_OLD__c: 380000.00
+  P2P_Plan_Mismatch_Count__c: 0
+  P2P_Platform__c: "Platform A"
+  P2P_PMP_Type__c: "Type A"
+  P2P_PRG_AOS_Digital_ID__c: "DIG-002"
+  P2P_PRG_AOS_Sync_Comments__c: "Sync Comment B"
+  P2P_Pricing_Goal__c: "Goal A"
+  P2P_Prior_Year_Linear_Score__c: 70
+  P2P_Prior_Year_Order_Archive__c: 500000.00
+  P2P_Prior_Year_Plan_Index__c: 90.0
+  P2P_Prior_Year_Quintile__c: "Quintile A"
+  P2P_Prior_Year_Upfront_Base_Gross__c: 600000.00
+  P2P_Prior_Year_Upfront_Base_Gross_Roll__c: 580000.00
+  P2P_Prior_Year_Upfront_Base_Net__c: 550000.00
+  P2P_Program__c: "Program A"
+  P2P_Property_Type_Migration__c: "Migration A"
+  P2P_Proposal_Amount__c: 450000.00
+  P2P_Proposal_Due_Date__c: "2024-06-25"
+  P2P_Proposal_Sent_Date__c: "2024-06-20"
+  P2P_Proposal_Status__c: "Pending"
+  P2P_Psychographic_Information__c: "Information A"
+  P2P_PY_Upfront_Base_Gross__c: 620000.00
+  P2P_Quarter_Closed__c: "Q2"
+  P2P_Quarterly_Dollar_Count__c: 2
+  P2P_RA_Rollup__c: "Rollup A"
+  P2P_Rating_Source__c: "Source A"
+  P2P_Rating_Type__c: "Type A"
+  P2P_Reason_Lost__c: "Reason A"
+  P2P_Reason_Lost_Notes__c: "Notes A"
+  P2P_Registered_Ancillary_Budget__c: 75000.00
+  P2P_Registered_Media_Budget__c: 100000.00
+  P2P_Related_Opportunity__c: "Opportunity B"
+  P2P_Reported_Amount_Net__c: 580000.00
+  P2P_Reported_Amount_Net_OLD__c: 570000.00
+  P2P_Reported_Opportunity_Amount__c: 630000.00
+  P2P_Reported_Opportunity_Amount_Net__c: 610000.00
+  P2P_Reported_Opportunity_Amount_OLD__c: 600000.00
+  P2P_Response_Type__c: "Response A"
+  P2P_RFP_Category__c: "Category A"
+  P2P_RFP_Receipt_Date__c: "2024-06-10"
+  P2P_SE_PMP_Count__c: 4
+  P2P_Season_ID__c: "Season A"
+  P2P_Secondary_KPI__c: "KPI B"
+  P2P_Segment__c: "Segment B"
+  P2P_Sports_Included__c: "Sports A"
+  P2P_SSP__c: "SSP A"
+  P2P_Sync_Comments__c: "Sync Comment C"
+  P2P_Sync_Notified__c: true
+  P2P_Synced_from_Plan_System__c: true
+  P2P_Syncing__c: true
+  P2P_TMZ_Sales_Category__c: "Category A"
+  P2P_TMZ_SFDC_ID_18__c: "TMZ-0018"
+  P2P_Total_Budgeted_Amount_Gross__c: 700000.00
+  P2P_Total_Budgeted_Amount_Gross_OLD__c: 680000.00
+  P2P_Total_Budgeted_Amount_Net__c: 650000.00
+  P2P_Total_Budgeted_Amount_Net_OLD__c: 630000.00
+  P2P_Total_Fluidity__c: 0.85
+  P2P_Total_Fluidity_Clone__c: 0.80
+  P2P_Total_Media_Buy__c: 750000.00
+  P2P_Total_Media_Buy_Net__c: 720000.00
+  P2P_Total_Plan_Amount_Net__c: 770000.00
+  P2P_Total_Plan_Amount_Net_OLD__c: 750000.00
+  P2P_Tubi_Billing_Schedule__c: "Monthly"
+  P2P_Tubi_Digital_Product_Count__c: 7
+  P2P_Tubi_Key_Account__c: "Key Account A"
+  P2P_Tubi_Payment_Term__c: "Net 30"
+  P2P_Tubi_Primary_Contact_Created__c: true
+  P2P_Tubi_SFDC_ID_18__c: "TUBI-0018"
+  P2P_TV_Digital_Integrated_Deal__c: true
+  P2P_Update_Amount_Gross__c: 790000.00
+  P2P_Update_Amount_Gross_on_Opp__c: 770000.00
+  P2P_Update_Amount_Net_Cross__c: 750000.00
+  P2P_Update_Amount_Net_on_Opp__c: 730000.00
+  P2P_Upfront_Clone__c: "Clone B"
+  P2P_Upfront_Incremental__c: 150000.00
+  P2P_User_is_Account_Manager__c: true
+  P2P_Versioning_Notes__c: "Versioning Note A"
+  P2P_Viewability_Guaranteed__c: true
+  P2P_Viewability_Type__c: "Type B"
+  P2P_Weighted_Revenue__c: 800000.00
+  P2P_Weighted_Revenue_Net__c: 770000.00
+  PartnerAccountId: "PA-001"
+  Pricebook2Id: "PB-001"
+  Probability: 80
+  RecordTypeId: "RT-001"
+  RepAmt_DNU__c: 0.0
+  SourceId: "SRC-001"
+  StageName: "Proposal"
+  SyncedQuoteId: "Q-001"
+  SystemModstamp: "2024-06-15T14:30:00Z"
+  TotalOpportunityQuantity: 50
+  Type: "Media"
+  X2021_Clone__c: "Clone C"
