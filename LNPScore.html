@@ -205,11 +205,13 @@
   populateDropdown(googleSheetUrl, "210713263");
 </script>
 
-<!--  <script>
+  <script>
     // Turn dropdown into searchable
-    $(document).ready(function() {
-      $('select').select2();
+    $(document).ready(function () {
+      $('select').select2({
+        width: 'resolve', // Automatically adjust width based on the parent container
+      });
     });
-  </script>-->
+  </script>
 </body>
 </html>
