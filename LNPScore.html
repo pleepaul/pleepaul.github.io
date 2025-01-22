@@ -3,213 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Searchable Google Form</title>
+  <title>Pickleball-Themed Form</title>
+
   <!-- Include Select2 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
+  <!-- Custom Styling -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://cdn.pixabay.com/photo/2020/01/14/21/52/tennis-court-4765731_1280.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      background-color: rgba(0, 128, 0, 0.8);
+      padding: 10px;
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-size: 1.2em;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .btn-primary {
+      background-color: #FFCC00;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #FFD633;
+    }
+
+    .radio label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1em;
+    }
+
+    .select2-container {
+      width: 100% !important;
+    }
+
+    .select2-selection {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Searchable Google Form</h1>
-  <!-- Embed Google Form -->
- <form action="https://docs.google.com/forms/d/e/1FAIpQLSddO2iSsEXNt2GnCqEUrzNJuJV9CxUND5t406Cavcz9jlMMmQ/formResponse"
-      target="_self"
-      id="bootstrapForm"
-      method="POST">
+  <h1>Pickleball DUPR Form</h1>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSddO2iSsEXNt2GnCqEUrzNJuJV9CxUND5t406Cavcz9jlMMmQ/formResponse" 
+        target="_self" 
+        id="bootstrapForm" 
+        method="POST">
     <fieldset>
-        <h2>LNP DUPR Form<br><small></small></h2>
+      <legend>Singles or Doubles?</legend>
+      <div class="form-group">
+        <label><input type="radio" name="entry.2495579" value="D" required> Doubles</label>
+        <label><input type="radio" name="entry.2495579" value="S" required> Singles</label>
+      </div>
     </fieldset>
 
-
-    <!-- Field type: "choices" id: "1613055460" -->
     <fieldset>
-        <legend for="1613055460">Singles or Doubles?</legend>
-        <div class="form-group">
-            <div class="radio">
-                <label>
-                    <input type="radio" name="entry.2495579" value="D" required>
-                    D
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="entry.2495579" value="S" required>
-                    S
-                </label>
-            </div>
-        </div>
+      <legend>Event</legend>
+      <div class="form-group">
+        <label><input type="radio" name="entry.71404313" value="Late Night Pickle" required> Late Night Pickle</label>
+        <label><input type="radio" name="entry.71404313" value="__other_option__" required> Other</label>
+        <input type="text" name="entry.71404313.other_option_response" placeholder="Custom value">
+      </div>
     </fieldset>
 
-
-    <!-- Field type: "choices" id: "1095099475" -->
+    <!-- Dropdowns -->
     <fieldset>
-        <legend for="1095099475">Event</legend>
-        <div class="form-group">
-            <div class="radio">
-                <label>
-                    <input type="radio" name="entry.71404313" value="Late Night Pickle" required>
-                    Late Night Pickle
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="entry.71404313" value="__other_option__" required>
-                </label>
-                <input type="text" name="entry.71404313.other_option_response" placeholder="custom value">
-            </div>
-        </div>
+      <legend>Winner 1</legend>
+      <div class="form-group">
+        <select id="1619031672" name="entry.814807437" class="form-control"></select>
+      </div>
     </fieldset>
 
-
-    <!-- Field type: "dropdown" id: "1619031672" -->
     <fieldset>
-        <legend for="1619031672">Winner 1</legend>
-        <div class="form-group">
-            <select id="1619031672" name="entry.814807437" class="form-control">
-              
-            </select>
-        </div>
+      <legend>Winner 2</legend>
+      <div class="form-group">
+        <select id="1715599789" name="entry.1081443295" class="form-control"></select>
+      </div>
     </fieldset>
 
-
-    <!-- Field type: "dropdown" id: "1715599789" -->
     <fieldset>
-        <legend for="1715599789">Winner 2</legend>
-        <div class="form-group">
-            <select id="1715599789" name="entry.1081443295" class="form-control">
-                <option value=""></option>
-            </select>
-        </div>
+      <legend>Loser 1</legend>
+      <div class="form-group">
+        <select id="529351476" name="entry.406327746" class="form-control"></select>
+      </div>
     </fieldset>
 
-
-    <!-- Field type: "dropdown" id: "529351476" -->
     <fieldset>
-        <legend for="529351476">Loser 1</legend>
-        <div class="form-group">
-            <select id="529351476" name="entry.406327746" class="form-control">
-                
-            </select>
-        </div>
+      <legend>Loser 2</legend>
+      <div class="form-group">
+        <select id="210713263" name="entry.850275875" class="form-control"></select>
+      </div>
     </fieldset>
-
-
-    <!-- Field type: "dropdown" id: "210713263" -->
-    <fieldset>
-        <legend for="210713263">Loser 2</legend>
-        <div class="form-group">
-            <select id="210713263" name="entry.850275875" class="form-control">
-                <option value=""></option>
-                
-            </select>
-        </div>
-    </fieldset>
-
-
-    <!-- Field type: "dropdown" id: "337766659" -->
-    <fieldset>
-        <legend for="337766659">Winning person/team score</legend>
-        <div class="form-group">
-            <select id="337766659" name="entry.1469355308" class="form-control">
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-            </select>
-        </div>
-    </fieldset>
-
-
-    <!-- Field type: "dropdown" id: "1084499680" -->
-    <fieldset>
-        <legend for="1084499680">Losing person/team score</legend>
-        <div class="form-group">
-            <select id="1084499680" name="entry.2053139832" class="form-control">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-            </select>
-        </div>
-    </fieldset>
-
-    <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="7508082989007964598">
-    <!--
-        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
-        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
-        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
-        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
-    -->
-    <input type="hidden" name="pageHistory" value="0">
 
     <input class="btn btn-primary" type="submit" value="Submit">
-</form>
-<script>
-  // Function to populate dropdown options dynamically
-  async function populateDropdown(sheetUrl, dropdownId) {
-    try {
-      // Fetch the CSV data from the Google Sheet
-      const response = await fetch(sheetUrl);
-      const csvData = await response.text();
-
-      // Parse the CSV data into rows
-      const rows = csvData.split("\n").map(row => row.split(","));
-
-      // Get the dropdown element by ID
-      const dropdown = document.getElementById(dropdownId);
-
-      // Clear existing options (optional)
-      dropdown.innerHTML = "";
-
-      // Populate dropdown options
-      rows.forEach((row, index) => {
-        if (row[0] && index > 0) { // Skip the header row
-          const option = document.createElement("option");
-          option.value = row[0]; // Set the option value
-          option.textContent = row[0]; // Set the visible text
-          dropdown.appendChild(option);
-        }
-      });
-    } catch (error) {
-      console.error("Error fetching or parsing data:", error);
-    }
-    $(`#${dropdownId}`).select2();
-  }
-
-  // Replace the URL with your Google Sheet's CSV URL
-  const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1CGe6p0ElW-UlBO-FwasdyB2q5_CT8ol24QV_U4ql4zogIc3yT15NE3ON0JEivtJgCZZK0X8jQKSQ/pub?gid=306301317&single=true&output=csv";
-
-  // Populate the Winner 1 dropdown (update the ID as needed)
-  populateDropdown(googleSheetUrl, "1619031672");
-  populateDropdown(googleSheetUrl, "1715599789");
-  populateDropdown(googleSheetUrl, "529351476");
-  populateDropdown(googleSheetUrl, "210713263");
-</script>
+  </form>
 
   <script>
-    // Turn dropdown into searchable
+    // Initialize Select2 for searchable dropdowns
     $(document).ready(function () {
       $('select').select2({
-        width: 'resolve', // Automatically adjust width based on the parent container
+        width: 'resolve',
       });
     });
   </script>
