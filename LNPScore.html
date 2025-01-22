@@ -261,6 +261,7 @@
 
   <script>
     document.getElementById('bootstrapForm').addEventListener('submit', async function (e) {
+      alert('form submitted');
       e.preventDefault();
       
       const formData = new FormData(e.target);
@@ -273,6 +274,8 @@
           'Content-Type': 'application/json',
         },
       });
+      const result = await response.text(); // Log the response
+      alert(result);
       
       if (response.ok) {
         alert('Form submitted successfully!');
