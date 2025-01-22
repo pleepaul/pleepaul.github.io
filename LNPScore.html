@@ -61,7 +61,7 @@
       font-size: 1em;
       border: 1px solid #ddd;
       border-radius: 5px;
-      line-height: 2.5; /* Fix alignment within select fields */
+      line-height: 1.5; /* Fix alignment within select fields */
     }
 
     .btn-primary {
@@ -246,7 +246,7 @@
       } catch (error) {
         console.error("Error fetching or parsing data:", error);
       }
-      $(`#${dropdownId}`).select2();
+     // $(`#${dropdownId}`).select2();
     }
 
     const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1CGe6p0ElW-UlBO-FwasdyB2q5_CT8ol24QV_U4ql4zogIc3yT15NE3ON0JEivtJgCZZK0X8jQKSQ/pub?gid=306301317&single=true&output=csv";
