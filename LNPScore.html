@@ -5,17 +5,677 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Searchable Google Form</title>
   <!-- Include Select2 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
 </head>
 <body>
   <h1>Searchable Google Form</h1>
   <!-- Embed Google Form -->
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfV21njBQAY_IIb2M0FjfyrYMyQVHU1d96WfhDEz4h3NtDp4w/viewform?embedded=true" width="100%" height="600" frameborder="0">Loading\'85</iframe>
+ <form action="https://docs.google.com/forms/d/e/1FAIpQLSddO2iSsEXNt2GnCqEUrzNJuJV9CxUND5t406Cavcz9jlMMmQ/formResponse"
+      target="_self"
+      id="bootstrapForm"
+      method="POST">
+    <fieldset>
+        <h2>LNP DUPR Form<br><small></small></h2>
+    </fieldset>
 
-  <!-- Include Select2 JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+    <!-- Field type: "choices" id: "1613055460" -->
+    <fieldset>
+        <legend for="1613055460">Singles or Doubles?</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.2495579" value="D" required>
+                    D
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.2495579" value="S" required>
+                    S
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "choices" id: "1095099475" -->
+    <fieldset>
+        <legend for="1095099475">Event</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.71404313" value="Late Night Pickle" required>
+                    Late Night Pickle
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.71404313" value="__other_option__" required>
+                </label>
+                <input type="text" name="entry.71404313.other_option_response" placeholder="custom value">
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "dropdown" id: "1619031672" -->
+    <fieldset>
+        <legend for="1619031672">Winner 1</legend>
+        <div class="form-group">
+            <select id="1619031672" name="entry.814807437" class="form-control">
+                <option value="Ac Ac">Ac Ac</option>
+                <option value="Aiden Nguyen">Aiden Nguyen</option>
+                <option value="Alan Ho">Alan Ho</option>
+                <option value="Alan Tang">Alan Tang</option>
+                <option value="Albert cheung">Albert cheung</option>
+                <option value="Albert Hong">Albert Hong</option>
+                <option value="albert wei">albert wei</option>
+                <option value="Alexander Romero">Alexander Romero</option>
+                <option value="Andric Cheong">Andric Cheong</option>
+                <option value="Andy Jiang">Andy Jiang</option>
+                <option value="Andy p">Andy p</option>
+                <option value="Andy Xie">Andy Xie</option>
+                <option value="Anthony Ng">Anthony Ng</option>
+                <option value="ben c">ben c</option>
+                <option value="Bruce Hu">Bruce Hu</option>
+                <option value="Carson Wang">Carson Wang</option>
+                <option value="Cecilia L">Cecilia L</option>
+                <option value="Charlie Pan">Charlie Pan</option>
+                <option value="Chris hou">Chris hou</option>
+                <option value="Christine Quan Yu">Christine Quan Yu</option>
+                <option value="Christopher Gioia">Christopher Gioia</option>
+                <option value="Chul Shim">Chul Shim</option>
+                <option value="Cornelius Yen">Cornelius Yen</option>
+                <option value="Cristian Navarro">Cristian Navarro</option>
+                <option value="Dale Kao">Dale Kao</option>
+                <option value="Dan Lau">Dan Lau</option>
+                <option value="Dani Tang">Dani Tang</option>
+                <option value="danny lin">danny lin</option>
+                <option value="David Hsiu">David Hsiu</option>
+                <option value="David Liu">David Liu</option>
+                <option value="Dieu Cai-Hsiu">Dieu Cai-Hsiu</option>
+                <option value="Donald Wong">Donald Wong</option>
+                <option value="Dylan Nguyen">Dylan Nguyen</option>
+                <option value="Ed Leong">Ed Leong</option>
+                <option value="Eddy Ng">Eddy Ng</option>
+                <option value="Edwin Mulhern">Edwin Mulhern</option>
+                <option value="Eric Sung">Eric Sung</option>
+                <option value="Erik DeAngelis">Erik DeAngelis</option>
+                <option value="Fernando Ng">Fernando Ng</option>
+                <option value="Frank Chieh Liu">Frank Chieh Liu</option>
+                <option value="Franklin Fok">Franklin Fok</option>
+                <option value="Gary Aqui">Gary Aqui</option>
+                <option value="George DeNoto">George DeNoto</option>
+                <option value="Ghulam mustafa">Ghulam mustafa</option>
+                <option value="Gregory Fujii">Gregory Fujii</option>
+                <option value="Guang Yao">Guang Yao</option>
+                <option value="Hank Nguyen">Hank Nguyen</option>
+                <option value="Henry Jia">Henry Jia</option>
+                <option value="Howard Chen">Howard Chen</option>
+                <option value="hunter hsiu">hunter hsiu</option>
+                <option value="jack chang">jack chang</option>
+                <option value="James Ho">James Ho</option>
+                <option value="Janice Lin">Janice Lin</option>
+                <option value="Jeff Ho">Jeff Ho</option>
+                <option value="Jeff salas">Jeff salas</option>
+                <option value="Jeremy Boley">Jeremy Boley</option>
+                <option value="JIN LEI">JIN LEI</option>
+                <option value="Joe Paek">Joe Paek</option>
+                <option value="Joe Shen">Joe Shen</option>
+                <option value="Johann Bishop">Johann Bishop</option>
+                <option value="John Huie">John Huie</option>
+                <option value="John Lin">John Lin</option>
+                <option value="Johnny Liu">Johnny Liu</option>
+                <option value="Joon Moon">Joon Moon</option>
+                <option value="Joseph Ruiz">Joseph Ruiz</option>
+                <option value="Justin Ho">Justin Ho</option>
+                <option value="Kanji Wang">Kanji Wang</option>
+                <option value="Kenny Yau">Kenny Yau</option>
+                <option value="kevin hu">kevin hu</option>
+                <option value="kiki zheng">kiki zheng</option>
+                <option value="Kin Chiang">Kin Chiang</option>
+                <option value="Kit Yeung">Kit Yeung</option>
+                <option value="Kwok Lou">Kwok Lou</option>
+                <option value="Lee Yamaguchi">Lee Yamaguchi</option>
+                <option value="Leo Chen">Leo Chen</option>
+                <option value="Luis Saltos">Luis Saltos</option>
+                <option value="Marc Blaize">Marc Blaize</option>
+                <option value="Mario Ramos">Mario Ramos</option>
+                <option value="Matthew Lau">Matthew Lau</option>
+                <option value="Maxx Yung">Maxx Yung</option>
+                <option value="May Y">May Y</option>
+                <option value="Melissa Chau-Cheng">Melissa Chau-Cheng</option>
+                <option value="Michael Duong">Michael Duong</option>
+                <option value="narae chang">narae chang</option>
+                <option value="Nathan Kung">Nathan Kung</option>
+                <option value="Nawshin basher">Nawshin basher</option>
+                <option value="nhoj pogi">nhoj pogi</option>
+                <option value="Nick G">Nick G</option>
+                <option value="Nicky Kwan">Nicky Kwan</option>
+                <option value="Niko Demiris">Niko Demiris</option>
+                <option value="Norm Y">Norm Y</option>
+                <option value="Ocean Blaize">Ocean Blaize</option>
+                <option value="Olaf Wang">Olaf Wang</option>
+                <option value="Paul Lee">Paul Lee</option>
+                <option value="Pei Yang">Pei Yang</option>
+                <option value="Penn Chai">Penn Chai</option>
+                <option value="Peter Lampione">Peter Lampione</option>
+                <option value="Phil Demers">Phil Demers</option>
+                <option value="philip barres">philip barres</option>
+                <option value="Po Wong">Po Wong</option>
+                <option value="Pranav Khanna">Pranav Khanna</option>
+                <option value="Randy Ng">Randy Ng</option>
+                <option value="Richard Chen">Richard Chen</option>
+                <option value="Richard Poh">Richard Poh</option>
+                <option value="Ricky yung">Ricky yung</option>
+                <option value="Ricky Vuong">Ricky Vuong</option>
+                <option value="Ruth Hsu">Ruth Hsu</option>
+                <option value="Salina Ho">Salina Ho</option>
+                <option value="Sarah Cheng">Sarah Cheng</option>
+                <option value="sav ng">sav ng</option>
+                <option value="Scott Liu">Scott Liu</option>
+                <option value="scott schneider">scott schneider</option>
+                <option value="Simon Wong">Simon Wong</option>
+                <option value="Sonny Yip">Sonny Yip</option>
+                <option value="Sourav Chaudhuri">Sourav Chaudhuri</option>
+                <option value="Stephen Weintraub">Stephen Weintraub</option>
+                <option value="Steven Cheng">Steven Cheng</option>
+                <option value="Sujay Sood">Sujay Sood</option>
+                <option value="Sunny Hong">Sunny Hong</option>
+                <option value="Thomas Chang">Thomas Chang</option>
+                <option value="Thomas Walter">Thomas Walter</option>
+                <option value="Thomas Wong">Thomas Wong</option>
+                <option value="Tom Lin">Tom Lin</option>
+                <option value="Tyron Yamaguchi">Tyron Yamaguchi</option>
+                <option value="Victor Huang">Victor Huang</option>
+                <option value="Wayne Pon">Wayne Pon</option>
+                <option value="Wilson Cheung">Wilson Cheung</option>
+                <option value="Winsley T">Winsley T</option>
+                <option value="Winson Lai">Winson Lai</option>
+            </select>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "dropdown" id: "1715599789" -->
+    <fieldset>
+        <legend for="1715599789">Winner 2</legend>
+        <div class="form-group">
+            <select id="1715599789" name="entry.1081443295" class="form-control">
+                <option value=""></option>
+                <option value="Ac Ac">Ac Ac</option>
+                <option value="Aiden Nguyen">Aiden Nguyen</option>
+                <option value="Alan Ho">Alan Ho</option>
+                <option value="Alan Tang">Alan Tang</option>
+                <option value="Albert cheung">Albert cheung</option>
+                <option value="Albert Hong">Albert Hong</option>
+                <option value="albert wei">albert wei</option>
+                <option value="Alexander Romero">Alexander Romero</option>
+                <option value="Andric Cheong">Andric Cheong</option>
+                <option value="Andy Jiang">Andy Jiang</option>
+                <option value="Andy p">Andy p</option>
+                <option value="Andy Xie">Andy Xie</option>
+                <option value="Anthony Ng">Anthony Ng</option>
+                <option value="ben c">ben c</option>
+                <option value="Bruce Hu">Bruce Hu</option>
+                <option value="Carson Wang">Carson Wang</option>
+                <option value="Cecilia L">Cecilia L</option>
+                <option value="Charlie Pan">Charlie Pan</option>
+                <option value="Chris hou">Chris hou</option>
+                <option value="Christine Quan Yu">Christine Quan Yu</option>
+                <option value="Christopher Gioia">Christopher Gioia</option>
+                <option value="Chul Shim">Chul Shim</option>
+                <option value="Cornelius Yen">Cornelius Yen</option>
+                <option value="Cristian Navarro">Cristian Navarro</option>
+                <option value="Dale Kao">Dale Kao</option>
+                <option value="Dan Lau">Dan Lau</option>
+                <option value="Dani Tang">Dani Tang</option>
+                <option value="danny lin">danny lin</option>
+                <option value="David Hsiu">David Hsiu</option>
+                <option value="David Liu">David Liu</option>
+                <option value="Dieu Cai-Hsiu">Dieu Cai-Hsiu</option>
+                <option value="Donald Wong">Donald Wong</option>
+                <option value="Dylan Nguyen">Dylan Nguyen</option>
+                <option value="Ed Leong">Ed Leong</option>
+                <option value="Eddy Ng">Eddy Ng</option>
+                <option value="Edwin Mulhern">Edwin Mulhern</option>
+                <option value="Eric Sung">Eric Sung</option>
+                <option value="Erik DeAngelis">Erik DeAngelis</option>
+                <option value="Fernando Ng">Fernando Ng</option>
+                <option value="Frank Chieh Liu">Frank Chieh Liu</option>
+                <option value="Franklin Fok">Franklin Fok</option>
+                <option value="Gary Aqui">Gary Aqui</option>
+                <option value="George DeNoto">George DeNoto</option>
+                <option value="Ghulam mustafa">Ghulam mustafa</option>
+                <option value="Gregory Fujii">Gregory Fujii</option>
+                <option value="Guang Yao">Guang Yao</option>
+                <option value="Hank Nguyen">Hank Nguyen</option>
+                <option value="Henry Jia">Henry Jia</option>
+                <option value="Howard Chen">Howard Chen</option>
+                <option value="hunter hsiu">hunter hsiu</option>
+                <option value="jack chang">jack chang</option>
+                <option value="James Ho">James Ho</option>
+                <option value="Janice Lin">Janice Lin</option>
+                <option value="Jeff Ho">Jeff Ho</option>
+                <option value="Jeff salas">Jeff salas</option>
+                <option value="Jeremy Boley">Jeremy Boley</option>
+                <option value="JIN LEI">JIN LEI</option>
+                <option value="Joe Paek">Joe Paek</option>
+                <option value="Joe Shen">Joe Shen</option>
+                <option value="Johann Bishop">Johann Bishop</option>
+                <option value="John Huie">John Huie</option>
+                <option value="John Lin">John Lin</option>
+                <option value="Johnny Liu">Johnny Liu</option>
+                <option value="Joon Moon">Joon Moon</option>
+                <option value="Joseph Ruiz">Joseph Ruiz</option>
+                <option value="Justin Ho">Justin Ho</option>
+                <option value="Kanji Wang">Kanji Wang</option>
+                <option value="Kenny Yau">Kenny Yau</option>
+                <option value="kevin hu">kevin hu</option>
+                <option value="kiki zheng">kiki zheng</option>
+                <option value="Kin Chiang">Kin Chiang</option>
+                <option value="Kit Yeung">Kit Yeung</option>
+                <option value="Kwok Lou">Kwok Lou</option>
+                <option value="Lee Yamaguchi">Lee Yamaguchi</option>
+                <option value="Leo Chen">Leo Chen</option>
+                <option value="Luis Saltos">Luis Saltos</option>
+                <option value="Marc Blaize">Marc Blaize</option>
+                <option value="Mario Ramos">Mario Ramos</option>
+                <option value="Matthew Lau">Matthew Lau</option>
+                <option value="Maxx Yung">Maxx Yung</option>
+                <option value="May Y">May Y</option>
+                <option value="Melissa Chau-Cheng">Melissa Chau-Cheng</option>
+                <option value="Michael Duong">Michael Duong</option>
+                <option value="narae chang">narae chang</option>
+                <option value="Nathan Kung">Nathan Kung</option>
+                <option value="Nawshin basher">Nawshin basher</option>
+                <option value="nhoj pogi">nhoj pogi</option>
+                <option value="Nick G">Nick G</option>
+                <option value="Nicky Kwan">Nicky Kwan</option>
+                <option value="Niko Demiris">Niko Demiris</option>
+                <option value="Norm Y">Norm Y</option>
+                <option value="Ocean Blaize">Ocean Blaize</option>
+                <option value="Olaf Wang">Olaf Wang</option>
+                <option value="Paul Lee">Paul Lee</option>
+                <option value="Pei Yang">Pei Yang</option>
+                <option value="Penn Chai">Penn Chai</option>
+                <option value="Peter Lampione">Peter Lampione</option>
+                <option value="Phil Demers">Phil Demers</option>
+                <option value="philip barres">philip barres</option>
+                <option value="Po Wong">Po Wong</option>
+                <option value="Pranav Khanna">Pranav Khanna</option>
+                <option value="Randy Ng">Randy Ng</option>
+                <option value="Richard Chen">Richard Chen</option>
+                <option value="Richard Poh">Richard Poh</option>
+                <option value="Ricky yung">Ricky yung</option>
+                <option value="Ricky Vuong">Ricky Vuong</option>
+                <option value="Ruth Hsu">Ruth Hsu</option>
+                <option value="Salina Ho">Salina Ho</option>
+                <option value="Sarah Cheng">Sarah Cheng</option>
+                <option value="sav ng">sav ng</option>
+                <option value="Scott Liu">Scott Liu</option>
+                <option value="scott schneider">scott schneider</option>
+                <option value="Simon Wong">Simon Wong</option>
+                <option value="Sonny Yip">Sonny Yip</option>
+                <option value="Sourav Chaudhuri">Sourav Chaudhuri</option>
+                <option value="Stephen Weintraub">Stephen Weintraub</option>
+                <option value="Steven Cheng">Steven Cheng</option>
+                <option value="Sujay Sood">Sujay Sood</option>
+                <option value="Sunny Hong">Sunny Hong</option>
+                <option value="Thomas Chang">Thomas Chang</option>
+                <option value="Thomas Walter">Thomas Walter</option>
+                <option value="Thomas Wong">Thomas Wong</option>
+                <option value="Tom Lin">Tom Lin</option>
+                <option value="Tyron Yamaguchi">Tyron Yamaguchi</option>
+                <option value="Victor Huang">Victor Huang</option>
+                <option value="Wayne Pon">Wayne Pon</option>
+                <option value="Wilson Cheung">Wilson Cheung</option>
+                <option value="Winsley T">Winsley T</option>
+                <option value="Winson Lai">Winson Lai</option>
+            </select>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "dropdown" id: "529351476" -->
+    <fieldset>
+        <legend for="529351476">Loser 1</legend>
+        <div class="form-group">
+            <select id="529351476" name="entry.406327746" class="form-control">
+                <option value="Ac Ac">Ac Ac</option>
+                <option value="Aiden Nguyen">Aiden Nguyen</option>
+                <option value="Alan Ho">Alan Ho</option>
+                <option value="Alan Tang">Alan Tang</option>
+                <option value="Albert cheung">Albert cheung</option>
+                <option value="Albert Hong">Albert Hong</option>
+                <option value="albert wei">albert wei</option>
+                <option value="Alexander Romero">Alexander Romero</option>
+                <option value="Andric Cheong">Andric Cheong</option>
+                <option value="Andy Jiang">Andy Jiang</option>
+                <option value="Andy p">Andy p</option>
+                <option value="Andy Xie">Andy Xie</option>
+                <option value="Anthony Ng">Anthony Ng</option>
+                <option value="ben c">ben c</option>
+                <option value="Bruce Hu">Bruce Hu</option>
+                <option value="Carson Wang">Carson Wang</option>
+                <option value="Cecilia L">Cecilia L</option>
+                <option value="Charlie Pan">Charlie Pan</option>
+                <option value="Chris hou">Chris hou</option>
+                <option value="Christine Quan Yu">Christine Quan Yu</option>
+                <option value="Christopher Gioia">Christopher Gioia</option>
+                <option value="Chul Shim">Chul Shim</option>
+                <option value="Cornelius Yen">Cornelius Yen</option>
+                <option value="Cristian Navarro">Cristian Navarro</option>
+                <option value="Dale Kao">Dale Kao</option>
+                <option value="Dan Lau">Dan Lau</option>
+                <option value="Dani Tang">Dani Tang</option>
+                <option value="danny lin">danny lin</option>
+                <option value="David Hsiu">David Hsiu</option>
+                <option value="David Liu">David Liu</option>
+                <option value="Dieu Cai-Hsiu">Dieu Cai-Hsiu</option>
+                <option value="Donald Wong">Donald Wong</option>
+                <option value="Dylan Nguyen">Dylan Nguyen</option>
+                <option value="Ed Leong">Ed Leong</option>
+                <option value="Eddy Ng">Eddy Ng</option>
+                <option value="Edwin Mulhern">Edwin Mulhern</option>
+                <option value="Eric Sung">Eric Sung</option>
+                <option value="Erik DeAngelis">Erik DeAngelis</option>
+                <option value="Fernando Ng">Fernando Ng</option>
+                <option value="Frank Chieh Liu">Frank Chieh Liu</option>
+                <option value="Franklin Fok">Franklin Fok</option>
+                <option value="Gary Aqui">Gary Aqui</option>
+                <option value="George DeNoto">George DeNoto</option>
+                <option value="Ghulam mustafa">Ghulam mustafa</option>
+                <option value="Gregory Fujii">Gregory Fujii</option>
+                <option value="Guang Yao">Guang Yao</option>
+                <option value="Hank Nguyen">Hank Nguyen</option>
+                <option value="Henry Jia">Henry Jia</option>
+                <option value="Howard Chen">Howard Chen</option>
+                <option value="hunter hsiu">hunter hsiu</option>
+                <option value="jack chang">jack chang</option>
+                <option value="James Ho">James Ho</option>
+                <option value="Janice Lin">Janice Lin</option>
+                <option value="Jeff Ho">Jeff Ho</option>
+                <option value="Jeff salas">Jeff salas</option>
+                <option value="Jeremy Boley">Jeremy Boley</option>
+                <option value="JIN LEI">JIN LEI</option>
+                <option value="Joe Paek">Joe Paek</option>
+                <option value="Joe Shen">Joe Shen</option>
+                <option value="Johann Bishop">Johann Bishop</option>
+                <option value="John Huie">John Huie</option>
+                <option value="John Lin">John Lin</option>
+                <option value="Johnny Liu">Johnny Liu</option>
+                <option value="Joon Moon">Joon Moon</option>
+                <option value="Joseph Ruiz">Joseph Ruiz</option>
+                <option value="Justin Ho">Justin Ho</option>
+                <option value="Kanji Wang">Kanji Wang</option>
+                <option value="Kenny Yau">Kenny Yau</option>
+                <option value="kevin hu">kevin hu</option>
+                <option value="kiki zheng">kiki zheng</option>
+                <option value="Kin Chiang">Kin Chiang</option>
+                <option value="Kit Yeung">Kit Yeung</option>
+                <option value="Kwok Lou">Kwok Lou</option>
+                <option value="Lee Yamaguchi">Lee Yamaguchi</option>
+                <option value="Leo Chen">Leo Chen</option>
+                <option value="Luis Saltos">Luis Saltos</option>
+                <option value="Marc Blaize">Marc Blaize</option>
+                <option value="Mario Ramos">Mario Ramos</option>
+                <option value="Matthew Lau">Matthew Lau</option>
+                <option value="Maxx Yung">Maxx Yung</option>
+                <option value="May Y">May Y</option>
+                <option value="Melissa Chau-Cheng">Melissa Chau-Cheng</option>
+                <option value="Michael Duong">Michael Duong</option>
+                <option value="narae chang">narae chang</option>
+                <option value="Nathan Kung">Nathan Kung</option>
+                <option value="Nawshin basher">Nawshin basher</option>
+                <option value="nhoj pogi">nhoj pogi</option>
+                <option value="Nick G">Nick G</option>
+                <option value="Nicky Kwan">Nicky Kwan</option>
+                <option value="Niko Demiris">Niko Demiris</option>
+                <option value="Norm Y">Norm Y</option>
+                <option value="Ocean Blaize">Ocean Blaize</option>
+                <option value="Olaf Wang">Olaf Wang</option>
+                <option value="Paul Lee">Paul Lee</option>
+                <option value="Pei Yang">Pei Yang</option>
+                <option value="Penn Chai">Penn Chai</option>
+                <option value="Peter Lampione">Peter Lampione</option>
+                <option value="Phil Demers">Phil Demers</option>
+                <option value="philip barres">philip barres</option>
+                <option value="Po Wong">Po Wong</option>
+                <option value="Pranav Khanna">Pranav Khanna</option>
+                <option value="Randy Ng">Randy Ng</option>
+                <option value="Richard Chen">Richard Chen</option>
+                <option value="Richard Poh">Richard Poh</option>
+                <option value="Ricky yung">Ricky yung</option>
+                <option value="Ricky Vuong">Ricky Vuong</option>
+                <option value="Ruth Hsu">Ruth Hsu</option>
+                <option value="Salina Ho">Salina Ho</option>
+                <option value="Sarah Cheng">Sarah Cheng</option>
+                <option value="sav ng">sav ng</option>
+                <option value="Scott Liu">Scott Liu</option>
+                <option value="scott schneider">scott schneider</option>
+                <option value="Simon Wong">Simon Wong</option>
+                <option value="Sonny Yip">Sonny Yip</option>
+                <option value="Sourav Chaudhuri">Sourav Chaudhuri</option>
+                <option value="Stephen Weintraub">Stephen Weintraub</option>
+                <option value="Steven Cheng">Steven Cheng</option>
+                <option value="Sujay Sood">Sujay Sood</option>
+                <option value="Sunny Hong">Sunny Hong</option>
+                <option value="Thomas Chang">Thomas Chang</option>
+                <option value="Thomas Walter">Thomas Walter</option>
+                <option value="Thomas Wong">Thomas Wong</option>
+                <option value="Tom Lin">Tom Lin</option>
+                <option value="Tyron Yamaguchi">Tyron Yamaguchi</option>
+                <option value="Victor Huang">Victor Huang</option>
+                <option value="Wayne Pon">Wayne Pon</option>
+                <option value="Wilson Cheung">Wilson Cheung</option>
+                <option value="Winsley T">Winsley T</option>
+                <option value="Winson Lai">Winson Lai</option>
+            </select>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "dropdown" id: "210713263" -->
+    <fieldset>
+        <legend for="210713263">Loser 2</legend>
+        <div class="form-group">
+            <select id="210713263" name="entry.850275875" class="form-control">
+                <option value=""></option>
+                <option value="Ac Ac">Ac Ac</option>
+                <option value="Aiden Nguyen">Aiden Nguyen</option>
+                <option value="Alan Ho">Alan Ho</option>
+                <option value="Alan Tang">Alan Tang</option>
+                <option value="Albert cheung">Albert cheung</option>
+                <option value="Albert Hong">Albert Hong</option>
+                <option value="albert wei">albert wei</option>
+                <option value="Alexander Romero">Alexander Romero</option>
+                <option value="Andric Cheong">Andric Cheong</option>
+                <option value="Andy Jiang">Andy Jiang</option>
+                <option value="Andy p">Andy p</option>
+                <option value="Andy Xie">Andy Xie</option>
+                <option value="Anthony Ng">Anthony Ng</option>
+                <option value="ben c">ben c</option>
+                <option value="Bruce Hu">Bruce Hu</option>
+                <option value="Carson Wang">Carson Wang</option>
+                <option value="Cecilia L">Cecilia L</option>
+                <option value="Charlie Pan">Charlie Pan</option>
+                <option value="Chris hou">Chris hou</option>
+                <option value="Christine Quan Yu">Christine Quan Yu</option>
+                <option value="Christopher Gioia">Christopher Gioia</option>
+                <option value="Chul Shim">Chul Shim</option>
+                <option value="Cornelius Yen">Cornelius Yen</option>
+                <option value="Cristian Navarro">Cristian Navarro</option>
+                <option value="Dale Kao">Dale Kao</option>
+                <option value="Dan Lau">Dan Lau</option>
+                <option value="Dani Tang">Dani Tang</option>
+                <option value="danny lin">danny lin</option>
+                <option value="David Hsiu">David Hsiu</option>
+                <option value="David Liu">David Liu</option>
+                <option value="Dieu Cai-Hsiu">Dieu Cai-Hsiu</option>
+                <option value="Donald Wong">Donald Wong</option>
+                <option value="Dylan Nguyen">Dylan Nguyen</option>
+                <option value="Ed Leong">Ed Leong</option>
+                <option value="Eddy Ng">Eddy Ng</option>
+                <option value="Edwin Mulhern">Edwin Mulhern</option>
+                <option value="Eric Sung">Eric Sung</option>
+                <option value="Erik DeAngelis">Erik DeAngelis</option>
+                <option value="Fernando Ng">Fernando Ng</option>
+                <option value="Frank Chieh Liu">Frank Chieh Liu</option>
+                <option value="Franklin Fok">Franklin Fok</option>
+                <option value="Gary Aqui">Gary Aqui</option>
+                <option value="George DeNoto">George DeNoto</option>
+                <option value="Ghulam mustafa">Ghulam mustafa</option>
+                <option value="Gregory Fujii">Gregory Fujii</option>
+                <option value="Guang Yao">Guang Yao</option>
+                <option value="Hank Nguyen">Hank Nguyen</option>
+                <option value="Henry Jia">Henry Jia</option>
+                <option value="Howard Chen">Howard Chen</option>
+                <option value="hunter hsiu">hunter hsiu</option>
+                <option value="jack chang">jack chang</option>
+                <option value="James Ho">James Ho</option>
+                <option value="Janice Lin">Janice Lin</option>
+                <option value="Jeff Ho">Jeff Ho</option>
+                <option value="Jeff salas">Jeff salas</option>
+                <option value="Jeremy Boley">Jeremy Boley</option>
+                <option value="JIN LEI">JIN LEI</option>
+                <option value="Joe Paek">Joe Paek</option>
+                <option value="Joe Shen">Joe Shen</option>
+                <option value="Johann Bishop">Johann Bishop</option>
+                <option value="John Huie">John Huie</option>
+                <option value="John Lin">John Lin</option>
+                <option value="Johnny Liu">Johnny Liu</option>
+                <option value="Joon Moon">Joon Moon</option>
+                <option value="Joseph Ruiz">Joseph Ruiz</option>
+                <option value="Justin Ho">Justin Ho</option>
+                <option value="Kanji Wang">Kanji Wang</option>
+                <option value="Kenny Yau">Kenny Yau</option>
+                <option value="kevin hu">kevin hu</option>
+                <option value="kiki zheng">kiki zheng</option>
+                <option value="Kin Chiang">Kin Chiang</option>
+                <option value="Kit Yeung">Kit Yeung</option>
+                <option value="Kwok Lou">Kwok Lou</option>
+                <option value="Lee Yamaguchi">Lee Yamaguchi</option>
+                <option value="Leo Chen">Leo Chen</option>
+                <option value="Luis Saltos">Luis Saltos</option>
+                <option value="Marc Blaize">Marc Blaize</option>
+                <option value="Mario Ramos">Mario Ramos</option>
+                <option value="Matthew Lau">Matthew Lau</option>
+                <option value="Maxx Yung">Maxx Yung</option>
+                <option value="May Y">May Y</option>
+                <option value="Melissa Chau-Cheng">Melissa Chau-Cheng</option>
+                <option value="Michael Duong">Michael Duong</option>
+                <option value="narae chang">narae chang</option>
+                <option value="Nathan Kung">Nathan Kung</option>
+                <option value="Nawshin basher">Nawshin basher</option>
+                <option value="nhoj pogi">nhoj pogi</option>
+                <option value="Nick G">Nick G</option>
+                <option value="Nicky Kwan">Nicky Kwan</option>
+                <option value="Niko Demiris">Niko Demiris</option>
+                <option value="Norm Y">Norm Y</option>
+                <option value="Ocean Blaize">Ocean Blaize</option>
+                <option value="Olaf Wang">Olaf Wang</option>
+                <option value="Paul Lee">Paul Lee</option>
+                <option value="Pei Yang">Pei Yang</option>
+                <option value="Penn Chai">Penn Chai</option>
+                <option value="Peter Lampione">Peter Lampione</option>
+                <option value="Phil Demers">Phil Demers</option>
+                <option value="philip barres">philip barres</option>
+                <option value="Po Wong">Po Wong</option>
+                <option value="Pranav Khanna">Pranav Khanna</option>
+                <option value="Randy Ng">Randy Ng</option>
+                <option value="Richard Chen">Richard Chen</option>
+                <option value="Richard Poh">Richard Poh</option>
+                <option value="Ricky yung">Ricky yung</option>
+                <option value="Ricky Vuong">Ricky Vuong</option>
+                <option value="Ruth Hsu">Ruth Hsu</option>
+                <option value="Salina Ho">Salina Ho</option>
+                <option value="Sarah Cheng">Sarah Cheng</option>
+                <option value="sav ng">sav ng</option>
+                <option value="Scott Liu">Scott Liu</option>
+                <option value="scott schneider">scott schneider</option>
+                <option value="Simon Wong">Simon Wong</option>
+                <option value="Sonny Yip">Sonny Yip</option>
+                <option value="Sourav Chaudhuri">Sourav Chaudhuri</option>
+                <option value="Stephen Weintraub">Stephen Weintraub</option>
+                <option value="Steven Cheng">Steven Cheng</option>
+                <option value="Sujay Sood">Sujay Sood</option>
+                <option value="Sunny Hong">Sunny Hong</option>
+                <option value="Thomas Chang">Thomas Chang</option>
+                <option value="Thomas Walter">Thomas Walter</option>
+                <option value="Thomas Wong">Thomas Wong</option>
+                <option value="Tom Lin">Tom Lin</option>
+                <option value="Tyron Yamaguchi">Tyron Yamaguchi</option>
+                <option value="Victor Huang">Victor Huang</option>
+                <option value="Wayne Pon">Wayne Pon</option>
+                <option value="Wilson Cheung">Wilson Cheung</option>
+                <option value="Winsley T">Winsley T</option>
+                <option value="Winson Lai">Winson Lai</option>
+            </select>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "dropdown" id: "337766659" -->
+    <fieldset>
+        <legend for="337766659">Winning person/team score</legend>
+        <div class="form-group">
+            <select id="337766659" name="entry.1469355308" class="form-control">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+    </fieldset>
+
+
+    <!-- Field type: "dropdown" id: "1084499680" -->
+    <fieldset>
+        <legend for="1084499680">Losing person/team score</legend>
+        <div class="form-group">
+            <select id="1084499680" name="entry.2053139832" class="form-control">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="7508082989007964598">
+    <!--
+        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+    -->
+    <input type="hidden" name="pageHistory" value="0">
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
   <script>
     // Turn dropdown into searchable
     $(document).ready(function() {
