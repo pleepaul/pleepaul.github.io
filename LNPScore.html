@@ -277,13 +277,12 @@
       const result = await response.text(); // Log the response
       console.log(result);
       
-      if (response.ok) {
+      if (response.ok || response.type === 'opaque') {
         alert('Form submitted successfully!');
+        window.location.href = 'LNPSuccess.html';
         e.target.reset(); // Optional: Reset the form after submission
       } else {
-        console.error('Error:', response.statusText);
         alert('Failed to submit the form.');
-        e.target.reset();
       }
     });
   </script>
