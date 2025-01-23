@@ -261,7 +261,6 @@
 
   <script>
     document.getElementById('bootstrapForm').addEventListener('submit', async function (e) {
-      alert('form submitted');
       e.preventDefault();
       
       const formData = new FormData(e.target);
@@ -282,7 +281,9 @@
         alert('Form submitted successfully!');
         e.target.reset(); // Optional: Reset the form after submission
       } else {
+        console.error('Error:', response.statusText);
         alert('Failed to submit the form.');
+        e.target.reset();
       }
     });
   </script>
