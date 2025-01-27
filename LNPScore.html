@@ -138,7 +138,7 @@
     <fieldset>
       <legend for="1619031672">Winner 1</legend>
       <div class="form-group">
-        <select id="1619031672" name="entry.814807437" class="form-control">
+        <select id="1619031672" name="entry.814807437" class="form-control" required>
           <option value="">Loading...</option>
         </select>
       </div>
@@ -156,7 +156,7 @@
     <fieldset>
       <legend for="529351476">Loser 1</legend>
       <div class="form-group">
-        <select id="529351476" name="entry.406327746" class="form-control">
+        <select id="529351476" name="entry.406327746" class="form-control" required>
           <option value="">Loading...</option>
         </select>
       </div>
@@ -306,7 +306,6 @@
           })
             .then((response) => {
               if (response.ok || response.type === 'opaque') {
-                alert('Form submitted successfully!');
                 window.location.href = 'LNPSuccess.html';
                 e.target.reset();
               } else {
