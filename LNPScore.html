@@ -272,7 +272,6 @@
         document.querySelectorAll('.error-message').forEach((el) => el.remove());
       
         // Check Winner 1
-      alert('[' + winner1.value.trim() + ']');
         if (winner1.value.trim()==="") {
           isValid = false;
           const error = document.createElement('span');
@@ -283,7 +282,7 @@
         }
       
         // Check Loser 1
-        if (loser1.value==="") {
+        if (loser1.value.trim()==="") {
           isValid = false;
           const error = document.createElement('span');
           error.textContent = 'Please select a Loser 1.';
