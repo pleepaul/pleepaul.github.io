@@ -266,8 +266,12 @@
       
         const winner1 = document.getElementById('1619031672');
         const winner1Label = winner1.options[winner1.selectedIndex].textContent;
+        const winner2 = document.getElementById('1715599789');
+        const winner2Label = winner2.options[winner2.selectedIndex].textContent;
         const loser1 = document.getElementById('529351476');
-        const loser11Label = loser1.options[loser1.selectedIndex].textContent;
+        const loser1Label = loser1.options[loser1.selectedIndex].textContent;
+        const loser2 = document.getElementById('210713263');
+        const loser2Label = loser2.options[loser2.selectedIndex].textContent;
         let isValid = true;
       
         // Clear existing error messages
@@ -298,6 +302,9 @@
           const formData = new FormData(e.target);
 
           formData.append('winner1Label',winner1Label);
+          formData.append('winner2Label',winner2Label);
+          formData.append('loser1Label',loser1Label);
+          formData.append('loser2Label',loser2Label);
           
           const data = Object.fromEntries(formData.entries());
       
