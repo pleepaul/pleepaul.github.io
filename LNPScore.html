@@ -229,7 +229,7 @@
         const rows = csvData.split("\n").map(row => row.split(","));
         const dropdown = document.getElementById(dropdownId);
 
-        dropdown.innerHTML = "";
+        dropdown.innerHTML = "<option value=''>Select a player</option>";
         rows.forEach((row, index) => {
           if (row[0] && index > 0) {
             const option = document.createElement("option");
