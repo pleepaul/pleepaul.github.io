@@ -282,6 +282,7 @@
         const loser2 = document.getElementById('210713263');
         const loser2Label = loser2.options[loser2.selectedIndex].textContent;
         let isValid = true;
+        let selectedValues = new Set();
       
         // Clear existing error messages
         document.querySelectorAll('.error-message').forEach((el) => el.remove());
@@ -305,6 +306,18 @@
           error.style.color = 'red';
           loser1.parentNode.appendChild(error);
         }
+
+        document.querySelectorAll('select').forEach(select => {
+          const value = select.value.trim();
+          if (value !== "" && selectedValues.has(value)) {
+            isValid = false;
+            const error = document.createElement('span');
+            error.textContent = 'Duplicate selections are not allowed.';
+            error.className = 'error-message';
+            select.parentNode.appendChild(error);
+          }
+          selectedValues.add(value);
+        });
       
         // If valid, proceed with submission
         if (isValid) {
