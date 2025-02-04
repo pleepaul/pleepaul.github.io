@@ -94,6 +94,13 @@
       line-height: 1.5 !important; /* Fix alignment in Select2 */
     }
 
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+      display: block;
+    }
+
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -293,7 +300,6 @@
           const error = document.createElement('span');
           error.textContent = 'Please select a Winner 1.';
           error.className = 'error-message';
-          error.style.color = 'red';
           winner1.parentNode.appendChild(error);
         }
       
@@ -303,7 +309,6 @@
           const error = document.createElement('span');
           error.textContent = 'Please select a Loser 1.';
           error.className = 'error-message';
-          error.style.color = 'red';
           loser1.parentNode.appendChild(error);
         }
 
@@ -314,7 +319,6 @@
             const error = document.createElement('span');
             error.textContent = 'You have already entered this player.';
             error.className = 'error-message';
-            error.style.color = 'red';
             select.parentNode.appendChild(error);
           }
           selectedValues.add(value);
