@@ -314,18 +314,6 @@
           loser1.parentNode.appendChild(error);
         }
 
-        document.querySelectorAll('select').forEach(select => {
-          const value = select.value.trim();
-          if (value !== "" && selectedValues.has(value)) {
-            isValid = false;
-            const error = document.createElement('span');
-            error.textContent = 'You have already entered this player.';
-            error.className = 'error-message';
-            select.parentNode.appendChild(error);
-          }
-          selectedValues.add(value);
-        });
-
         // Validate that the losing score is not higher than the winning score
         if (loserScore >= winnerScore) {
             isValid = false;
@@ -333,6 +321,21 @@
             error.textContent = 'Losing score cannot be higher than or equal to the winning score.';
             error.className = 'error-message';
             document.getElementById('1084499680').parentNode.appendChild(error);
+        }
+
+        //Check for duplicate player entries
+        if (isValid) {
+          document.querySelectorAll('select').forEach(select => {
+            const value = select.value.trim();
+            if (value !== "" && selectedValues.has(value)) {
+              isValid = false;
+              const error = document.createElement('span');
+              error.textContent = 'You have already entered this player.';
+              error.className = 'error-message';
+              select.parentNode.appendChild(error);
+            }
+            selectedValues.add(value);
+          });
         }
       
         // If valid, proceed with submission
