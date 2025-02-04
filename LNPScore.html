@@ -288,6 +288,8 @@
         const loser1Label = loser1.options[loser1.selectedIndex].textContent;
         const loser2 = document.getElementById('210713263');
         const loser2Label = loser2.options[loser2.selectedIndex].textContent;
+        const winnerScore = parseInt(document.getElementById('337766659').value, 10);
+        const loserScore = parseInt(document.getElementById('1084499680').value, 10);
         let isValid = true;
         let selectedValues = new Set();
       
@@ -323,6 +325,15 @@
           }
           selectedValues.add(value);
         });
+
+        // Validate that the losing score is not higher than the winning score
+        if (loserScore >= winnerScore) {
+            isValid = false;
+            const error = document.createElement('span');
+            error.textContent = 'Losing score cannot be higher than or equal to the winning score.';
+            error.className = 'error-message';
+            document.getElementById('1084499680').parentNode.appendChild(error);
+        }
       
         // If valid, proceed with submission
         if (isValid) {
