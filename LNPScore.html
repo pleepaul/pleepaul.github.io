@@ -314,6 +314,7 @@
             const error = document.createElement('span');
             error.textContent = 'Duplicate selections are not allowed.';
             error.className = 'error-message';
+            error.style.color = 'red';
             select.parentNode.appendChild(error);
           }
           selectedValues.add(value);
