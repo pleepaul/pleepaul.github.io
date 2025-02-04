@@ -312,7 +312,7 @@
           if (value !== "" && selectedValues.has(value)) {
             isValid = false;
             const error = document.createElement('span');
-            error.textContent = 'Duplicate selections are not allowed.';
+            error.textContent = 'You have already entered this player.';
             error.className = 'error-message';
             error.style.color = 'red';
             select.parentNode.appendChild(error);
