@@ -137,8 +137,8 @@
         rows.forEach((row, index) => {
           if (row[0] && index > 0) {
             const option = document.createElement("option");
-            option.value = row[0];
-            option.textContent = row[0]; // Assuming the player name is in the first column
+            option.value = row[1];
+            option.textContent = row[1]; // Assuming the player name is in the first column
             dropdown.appendChild(option);
           }
         });
