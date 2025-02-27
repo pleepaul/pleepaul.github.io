@@ -41,7 +41,7 @@
       margin-bottom: 8px;
       font-size: 1em;
     }
-    select, input[type="checkbox"], button {
+    select, input[type="checkbox"], input[type="submit"] {
       width: 100%;
       padding: 10px;
       margin-top: 8px;
@@ -157,8 +157,14 @@
     document.getElementById('RegistrationForm').addEventListener('submit', function (e) {
       e.preventDefault();
 
+      const submitButton = document.getElementById('submitButton');
+
+      const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
       
+      submitButton.disabled = true;
+      submitButton.value = 'Submitting...';
+
       fetch('https://script.google.com/macros/s/AKfycbzOfwekx1J2zZAi1HqHWxrxIM3vQXVOc8fuShZN7Xm-0CS2hvsEGjLzTbR3T1ZZb5iP/exec', {
         method: 'POST',
         mode: 'no-cors',
