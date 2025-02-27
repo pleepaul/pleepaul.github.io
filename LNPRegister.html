@@ -96,7 +96,7 @@
 <body>
   <h1>Late Night Pickle Registration</h1>
   <div class="container">
-    <form action="/submit_registration" method="post">
+    <form id="RegistrationForm">
       <div class="form-group">
         <label for="playerName">Player Name:</label>
         <select name="playerName" id="playerName">
@@ -141,7 +141,7 @@
           if (row[0] && index > 0) {
             const option = document.createElement("option");
             option.value = row[0];
-            option.textContent = row[1]; // Assuming the player name is in the first column
+            option.textContent = row[1]; 
             dropdown.appendChild(option);
           }
         });
@@ -149,6 +149,34 @@
         console.error("Error fetching or parsing data:", error);
       }
     }
+
+    document.getElementById('RegistrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const data = Object.fromEntries(formData.entries());
+      
+      fetch('https://script.google.com/macros/s/AKfycbzOfwekx1J2zZAi1HqHWxrxIM3vQXVOc8fuShZN7Xm-0CS2hvsEGjLzTbR3T1ZZb5iP/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((response) => {
+          if (response.ok || response.type === 'opaque') {
+            window.location.href = 'LNPSuccess.html';
+            e.target.reset();
+          } else {
+            alert('Failed to submit the form.');
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again.');
+        });
+
+    });
   </script>
 </body>
 </html>
