@@ -107,7 +107,11 @@
         <input type="checkbox" id="guests" name="guests">
         <label for="guests" class="checkbox-label">Bringing a Guest</label>
       </div>
-      <button type="submit">Submit</button>
+      <input id="submitButton" class="btn btn-primary" type="submit" value="Submit">
+      <div id="loadingIndicator" style="display: none; text-align: center; margin-top: 10px;">
+        <p>Submitting...</p>
+      <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #FFCC00; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite;"></div>
+    </div>
     </form>
     <div class="list">
       <h3>Current Players Registered</h3>
