@@ -150,8 +150,9 @@
   
       rows.forEach((row, index) => {
           const playerDetails = row.split(",");
+          const playerName = playerDetails[1].replace(/^"|"$/g, '');
           const playerEntry = document.createElement('li');
-          playerEntry.textContent = playerDetails[1]; // Assuming player name is in the second column
+          playerEntry.textContent = playerName;
   
           if (index < 10) {
               currentPlayersList.appendChild(playerEntry);
