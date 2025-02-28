@@ -185,8 +185,13 @@
       e.preventDefault();
 
       const submitButton = document.getElementById('submitButton');
+      const player = document.getElementById('playerName');
+      const playerLabel = player.options[player.selectedIndex].textContent;
 
       const formData = new FormData(e.target);
+
+      formData.append('playerLabel',playerLabel);
+
       const data = Object.fromEntries(formData.entries());
       
       submitButton.disabled = true;
