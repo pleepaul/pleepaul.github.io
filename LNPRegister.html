@@ -72,22 +72,6 @@
       justify-content: center;
       align-items: flex-start;
     }
-    .list {
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 30px;
-      width: 30%; /* Adjust if necessary */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      padding: 8px;
-      border-bottom: 1px solid #ddd;
-    }
     .select2-container {
       width: 100% !important; /* Ensuring Select2 is responsive */
     }
@@ -113,15 +97,7 @@
       <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #FFCC00; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite;"></div>
     </div>
     </form>
-    <div class="list">
-      <h3>Current Players Registered</h3>
-      <ul>
-      </ul>
-      <h3>Players on Waitlist</h3>
-      <ul>
-      </ul>
-    </div>
-  </div>
+    
   <script>
     $(document).ready(function() {
       $('select').select2();
@@ -129,38 +105,7 @@
       const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1CGe6p0ElW-UlBO-FwasdyB2q5_CT8ol24QV_U4ql4zogIc3yT15NE3ON0JEivtJgCZZK0X8jQKSQ/pub?gid=306301317&single=true&output=csv";
       populateDropdown(googleSheetUrl, 'playerName');
 
-      const googleSheetRegistration = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRblJggOFVB2cUqwo0lcmG9KnjKFuvaDo8d8SxUFzURUuUj4mjt5seyvvJQwimZHAx1KyRHTBt9LbWf/pub?gid=0&single=true&output=csv";
-      fetchPlayerData(googleSheetRegistration);
     });
-
-    async function fetchPlayerData(sheetUrl) {
-      try {
-          const response = await fetch(sheetUrl);
-          const csvData = await response.text();
-          processPlayerData(csvData);
-      } catch (error) {
-          console.error("Error fetching or parsing data:", error);
-      }
-  }
-  
-  function processPlayerData(csvData) {
-      const rows = csvData.split("\n").slice(1); // Ignore the header
-      const currentPlayersList = document.querySelector('.list h3:first-of-type + ul');
-      const waitlistPlayersList = document.querySelector('.list h3:last-of-type + ul');
-  
-      rows.forEach((row, index) => {
-          const playerDetails = row.split(",");
-          const playerName = playerDetails[1].replace(/^"|"$/g, '');
-          const playerEntry = document.createElement('li');
-          playerEntry.textContent = playerName;
-  
-          if (index < 10) {
-              currentPlayersList.appendChild(playerEntry);
-          } else {
-              waitlistPlayersList.appendChild(playerEntry);
-          }
-      });
-  }
 
     async function populateDropdown(sheetUrl, dropdownId) {
       try {
