@@ -140,21 +140,21 @@
               const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
               const name = details[1].replace(/^"|"$/g, '');
               const guest = details[2].trim() === 'Yes';
-              let guestName = details[4].replace(/^"|"$/g, '');
+              const guestName = details[4].replace(/^"|"$/g, '');
 
               if (guest && guestName) {
                 //name += ` (${guestName})`; // Append guest name in parentheses
                 guestName += ` (${name})`;
               }
               
-              if (!onlyGuests || guest) {
-                  const row = table.insertRow(-1);
-                  const cell1 = row.insertCell(0);
-                  const cell2 = row.insertCell(1);
-                  const cell3 = row.insertCell(2);
-                  cell1.textContent = count++;
-                  cell2.textContent = name;
-                  cell3.textContent = timestamp;
+              if (onlyGuests && guest && guestName) {
+                const row = table.insertRow(-1);
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                const cell3 = row.insertCell(2);
+                cell1.textContent = count++;
+                cell2.textContent = guestName + ` (${name})`; // Displaying guest name with player name in parentheses
+                cell3.textContent = timestamp;
               }
           }
       });
