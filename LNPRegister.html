@@ -32,6 +32,7 @@
       width: 50%; /* Adjusted width */
       margin: 30px auto;
       padding: 20px;
+      box-sizing: border-box;
     }
     .form-group {
       margin-bottom: 20px;
@@ -41,13 +42,14 @@
       margin-bottom: 8px;
       font-size: 1em;
     }
-    select, input[type="checkbox"], input[type="submit"] {
+    select, input[type="checkbox"], input[type="submit"], input[type="text"] {
       width: 100%;
       padding: 10px;
       margin-top: 8px;
       border: 1px solid #ddd;
       border-radius: 5px;
       font-size: 16px;
+      box-sizing: border-box;
     }
     .btn-primary {
       background-color: #FFCC00;
@@ -75,6 +77,9 @@
     .select2-container {
       width: 100% !important; /* Ensuring Select2 is responsive */
     }
+    #guestNameGroup {
+      display: none; /* Initially hidden */
+      margin-top: 10px;
   </style>
 </head>
 <body>
@@ -91,6 +96,10 @@
         <input type="checkbox" id="guests" name="guests">
         <label for="guests" class="checkbox-label">Bringing a Guest</label>
       </div>
+      <div id="guestNameGroup" class="form-group">
+        <label for="guestName">Guest Name:</label>
+        <input type="text" id="guestName" name="guestName">
+      </div>
       <input id="submitButton" class="btn btn-primary" type="submit" value="Submit">
       <div id="loadingIndicator" style="display: none; text-align: center; margin-top: 10px;">
         <p>Submitting...</p>
@@ -101,6 +110,26 @@
   <script>
     $(document).ready(function() {
       $('select').select2();
+
+      const checkbox = $('#guests');
+      const guestNameInput = $('#guestName');
+      
+      // Explicitly uncheck the checkbox on page load
+      checkbox.prop('checked', false);
+      $('#guestNameGroup').hide(); // Ensure the guest name input is hidden
+      guestNameInput.val(''); // Clear any previously entered value
+      guestNameInput.removeAttr('required'); // Ensure it's not required unless checked
+
+      checkbox.change(function() {
+          if (this.checked) {
+              $('#guestNameGroup').show();
+              guestNameInput.attr('required', 'required');
+          } else {
+              $('#guestNameGroup').hide();
+              guestNameInput.val(''); // Clear the input when checkbox is not checked
+              guestNameInput.removeAttr('required');
+          }
+      });
 
       const googleSheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1CGe6p0ElW-UlBO-FwasdyB2q5_CT8ol24QV_U4ql4zogIc3yT15NE3ON0JEivtJgCZZK0X8jQKSQ/pub?gid=306301317&single=true&output=csv";
       populateDropdown(googleSheetUrl, 'playerName');
