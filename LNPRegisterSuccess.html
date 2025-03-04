@@ -14,12 +14,9 @@
       background-attachment: fixed;
       color: #333;
       margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
+      padding: 20px; /* Added padding for overall page padding and better view on small screens */
+      min-height: 100vh; /* Ensures it takes at least the height of the viewport */
+      display: block; /* Changed from flex to block */
     }
 
     .container, .list-section {
@@ -29,13 +26,24 @@
       text-align: center;
       padding: 20px;
       max-width: 600px;
-      width: 100%;
-      margin-bottom: 20px;
+      width: 90%; /* Adjust width to not be too wide on larger screens */
+      margin: 20px auto; /* Centering the sections */
     }
 
-    h1, h2 {
+    h1 {
       color: #008000;
-      margin-bottom: 20px;
+      margin: 20px 0; /* More space around the title */
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 0 0 20px 0; /* Adjust bottom margin */
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: #006400;
+      margin-bottom: 10px;
     }
 
     table {
@@ -68,7 +76,8 @@
     button:hover {
       background-color: #FFD633;
     }
-  </style>
+</style>
+
 </head>
 <body>
   <div class="container">
