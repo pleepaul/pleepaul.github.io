@@ -1,0 +1,27 @@
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.openById('1-9m_6i6BCZqLKJseonyHusmsyyG3t7kBA81ZuOpHPkA').getSheetByName('Registration');
+
+    var data = JSON.parse(e.postData.contents);
+    
+    var playerId = data['playerName'];
+    var playerLabel = data['playerLabel'];
+    var guests = data['guests'] === 'on' ? 'Yes' : 'No';
+    var guestName = data['guestName'];
+    var timeStamp = new Date();
+
+    sheet.appendRow([playerId, playerLabel, guests,timeStamp, guestName]);
+
+    // Respond with a success message
+      return ContentService.createTextOutput(JSON.stringify({ status: 'success' }))
+        .setMimeType(ContentService.MimeType.JSON)
+        .setHeader('Access-Control-Allow-Origin', '*') // Allow requests from any origin
+        .setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS') // Allow POST and OPTIONS methods
+        .setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow custom headers
+  } catch (error) {
+    Logger.log("Error: " + error.message);
+    return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: error.message }))
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeader('Access-Control-Allow-Origin', '*');
+  }
+}
