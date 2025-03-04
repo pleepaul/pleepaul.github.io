@@ -126,32 +126,48 @@
 
     function processPlayerData(csvData) {
       const rows = csvData.split("\n").slice(1); // Ignore the header
-      processSection(rows, '#players-registered', 10);
-      processSection(rows, '#waitlist', Number.MAX_SAFE_INTEGER, 10);
-      processSection(rows, '#guests-list', Number.MAX_SAFE_INTEGER, 0, true);
+      processSection(rows, '#players-registered', 10); // Assuming first 36 go to "Players Registered"
+      processSection(rows, '#waitlist', Number.MAX_SAFE_INTEGER, 10); // Remaining go to "Waitlist"
+      processGuestsSection(rows, '#guests-list'); // Special processing for guests
     }
-
-    function processSection(rows, selector, max, start = 0, onlyGuests = false) {
+  
+    function processSection(rows, selector, max, start = 0) {
       const table = document.querySelector(selector);
       let count = 1;
-      rows.forEach((row, index) => {
-          if (index >= start && count <= max) {
-              const details = row.split(",");
-              const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
-              const name = details[1].replace(/^"|"$/g, '');
-              const guest = details[2].trim() === 'Yes';
-              const guestName = details[4].replace(/^"|"$/g, '');
-              
-              if (onlyGuests && guest && guestName) {
-                const row = table.insertRow(-1);
-                const cell1 = row.insertCell(0);
-                const cell2 = row.insertCell(1);
-                const cell3 = row.insertCell(2);
-                cell1.textContent = count++;
-                cell2.textContent = guestName + ` (${name})`; // Displaying guest name with player name in parentheses
-                cell3.textContent = timestamp;
-              }
-          }
+      rows.slice(start, start + max).forEach((row, index) => {
+        const details = row.split(",");
+        const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
+        const name = details[1].replace(/^"|"$/g, '');
+  
+        const rowElement = table.insertRow(-1);
+        const cell1 = rowElement.insertCell(0);
+        const cell2 = rowElement.insertCell(1);
+        const cell3 = rowElement.insertCell(2);
+        cell1.textContent = count++;
+        cell2.textContent = name;
+        cell3.textContent = timestamp;
+      });
+    }
+  
+    function processGuestsSection(rows, selector) {
+      const table = document.querySelector(selector);
+      let count = 1;
+      rows.forEach(row => {
+        const details = row.split(",");
+        const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
+        const name = details[1].replace(/^"|"$/g, ''); // Player's name
+        const guest = details[2].trim() === 'Yes'; // Checking if guest
+        const guestName = details[4].replace(/^"|"$/g, ''); // Guest's name
+  
+        if (guest && guestName) {
+          const rowElement = table.insertRow(-1);
+          const cell1 = rowElement.insertCell(0);
+          const cell2 = rowElement.insertCell(1);
+          const cell3 = rowElement.insertCell(2);
+          cell1.textContent = count++;
+          cell2.textContent = `${guestName} (${name})`; // Display guest's name with player's name in parentheses
+          cell3.textContent = timestamp;
+        }
       });
     }
   </script>
