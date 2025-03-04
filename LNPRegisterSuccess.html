@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submission Successful</title>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     body {
@@ -18,7 +19,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      flex-direction: column; /* Changed to column to stack elements vertically */
+      flex-direction: column;
     }
 
     .container, .list-section {
@@ -27,38 +28,29 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       text-align: center;
       padding: 20px;
-      max-width: 500px;
+      max-width: 600px;
       width: 100%;
-      margin-bottom: 20px; /* Add space between sections */
+      margin-bottom: 20px;
     }
 
-    h1 {
+    h1, h2 {
       color: #008000;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-      line-height: 1.6;
-      color: #555; /* Dark grey for better readability */
-      font-weight: 400; /* Normal weight for easier reading */
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    h2 {
-      font-size: 1.4em;
-      color: #006400; /* Darker green to differentiate section titles */
-      margin-bottom: 10px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
+    th, td {
+      border: 1px solid #ddd;
       padding: 8px;
-      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
     }
 
     button {
@@ -86,31 +78,31 @@
   </div>
   <div class="list-section">
     <h2>Players Registered</h2>
-    <ul id="players-registered">
-      <!-- Players registered will be populated here -->
-    </ul>
+    <table id="players-registered">
+      <tr><th>#</th><th>Name</th><th>Timestamp</th></tr>
+    </table>
   </div>
   <div class="list-section">
     <h2>Waitlist</h2>
-    <ul id="waitlist">
-      <!-- Waitlisted players will be populated here -->
-    </ul>
+    <table id="waitlist">
+      <tr><th>#</th><th>Name</th><th>Timestamp</th></tr>
+    </table>
   </div>
   <div class="list-section">
     <h2>Guests</h2>
-    <ul id="guests-list">
-      <!-- Guests will be populated here -->
-    </ul>
+    <table id="guests-list">
+      <tr><th>#</th><th>Name</th><th>Timestamp</th></tr>
+    </table>
   </div>
   <script>
+    function refreshPage() {
+      window.location.reload();
+    }
+
     $(document).ready(function() {
       const googleSheetRegistration = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRblJggOFVB2cUqwo0lcmG9KnjKFuvaDo8d8SxUFzURUuUj4mjt5seyvvJQwimZHAx1KyRHTBt9LbWf/pub?gid=0&single=true&output=csv";
       fetchPlayerData(googleSheetRegistration);
     });
-
-    function refreshPage() {
-      window.location.reload();
-    }
 
     async function fetchPlayerData(sheetUrl) {
       try {
@@ -124,28 +116,29 @@
 
     function processPlayerData(csvData) {
       const rows = csvData.split("\n").slice(1); // Ignore the header
-      const playersList = document.querySelector('#players-registered');
-      const waitlistList = document.querySelector('#waitlist');
-      const guestsList = document.querySelector('#guests-list');
-  
-      rows.forEach((row, index) => {
-          const details = row.split(",");
-          const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString(); // Formatting the timestamp
-          const name = details[1].replace(/^"|"$/g, ''); // Remove any quotes that may be wrapped around the data
-          const guest = details[2].trim() === 'Yes'; // Assuming 'Yes' or 'No' for guests
-          const playerEntry = document.createElement('li');
-          playerEntry.textContent = `${timestamp} - ${name}`;
-        
-          if (index < 10) {
-              playersList.appendChild(playerEntry);
-          } else {
-              waitlistList.appendChild(playerEntry);
-          }
+      processSection(rows, '#players-registered', 36);
+      processSection(rows, '#waitlist', Number.MAX_SAFE_INTEGER, 36);
+      processSection(rows, '#guests-list', Number.MAX_SAFE_INTEGER, 0, true);
+    }
 
-          if (guest) {
-              const guestEntry = document.createElement('li');
-              guestEntry.textContent = `${timestamp} - ${name}`;
-              guestsList.appendChild(guestEntry);
+    function processSection(rows, selector, max, start = 0, onlyGuests = false) {
+      const table = document.querySelector(selector);
+      let count = 1;
+      rows.forEach((row, index) => {
+          if (index >= start && count <= max) {
+              const details = row.split(",");
+              const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
+              const name = details[1].replace(/^"|"$/g, '');
+              const guest = details[2].trim() === 'Yes';
+              if (!onlyGuests || guest) {
+                  const row = table.insertRow(-1);
+                  const cell1 = row.insertCell(0);
+                  const cell2 = row.insertCell(1);
+                  const cell3 = row.insertCell(2);
+                  cell1.textContent = count++;
+                  cell2.textContent = name;
+                  cell3.textContent = timestamp;
+              }
           }
       });
     }
