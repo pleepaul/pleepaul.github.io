@@ -116,8 +116,8 @@
 
     function processPlayerData(csvData) {
       const rows = csvData.split("\n").slice(1); // Ignore the header
-      processSection(rows, '#players-registered', 36);
-      processSection(rows, '#waitlist', Number.MAX_SAFE_INTEGER, 36);
+      processSection(rows, '#players-registered', 10);
+      processSection(rows, '#waitlist', Number.MAX_SAFE_INTEGER, 10);
       processSection(rows, '#guests-list', Number.MAX_SAFE_INTEGER, 0, true);
     }
 
