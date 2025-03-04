@@ -19,34 +19,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensures full viewport height */
+    flex-direction: column; /* Ensures vertical stacking */
+    height: 100vh;
   }
+
   h1 {
     text-align: center;
     color: #fff;
     background-color: rgba(0, 128, 0, 0.8);
     padding: 10px;
-    margin: 0;
-    font-size: 2.5em;
+    margin-bottom: 20px; /* Ensure there is space between the title and the form */
+    width: 100%; /* Full width to ensure it is centered */
+    box-sizing: border-box;
   }
+
   form {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Ensures full width on smaller screens */
-    max-width: 500px; /* Limits max width for larger screens */
-    margin: 20px;
+    width: 90%; /* Adjusted for mobile and smaller screens */
+    max-width: 500px; /* Max width for larger screens */
     padding: 20px;
-    box-sizing: border-box; /* Includes padding and border in the width */
+    box-sizing: border-box;
   }
-  .form-group, .checkbox-group {
+
+  .form-group {
     margin-bottom: 20px;
   }
-  label, .checkbox-label {
+
+  label {
     display: block;
     margin-bottom: 8px;
     font-size: 1em;
   }
+
   select, input[type="checkbox"], input[type="submit"], input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -55,6 +61,7 @@
     border-radius: 5px;
     font-size: 16px;
   }
+
   .btn-primary {
     background-color: #FFCC00;
     color: #333;
@@ -62,32 +69,25 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
+
   .btn-primary:hover {
     background-color: #FFD633;
   }
+
   .checkbox-group {
     display: flex;
-    flex-direction: column; /* Stack checkbox and label vertically on small screens */
-    align-items: flex-start; /* Aligns items to the start of the flex container */
+    align-items: center;
+    margin-bottom: 20px;
   }
+
   .checkbox-label {
     margin-left: 8px;
-    align-self: flex-start; /* Ensures label alignment is consistent */
   }
-  .container {
-    width: 95%; /* Gives a little padding around the form */
-    max-width: 600px; /* Maximum width of the container */
-  }
-  @media (max-width: 600px) {
-    .container, form {
-      width: 90%; /* Allows for a bit more responsive padding */
-    }
-    .checkbox-group {
-      flex-direction: row; /* Aligns checkbox and label inline on smaller screens */
-    }
+
+  .select2-container {
+    width: 100% !important;
   }
 </style>
-
 </head>
 <body>
   <h1>Late Night Pickle Registration</h1>
