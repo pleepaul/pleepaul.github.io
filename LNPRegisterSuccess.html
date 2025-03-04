@@ -141,11 +141,6 @@
               const name = details[1].replace(/^"|"$/g, '');
               const guest = details[2].trim() === 'Yes';
               const guestName = details[4].replace(/^"|"$/g, '');
-
-              if (guest && guestName) {
-                //name += ` (${guestName})`; // Append guest name in parentheses
-                guestName += ` (${name})`;
-              }
               
               if (onlyGuests && guest && guestName) {
                 const row = table.insertRow(-1);
