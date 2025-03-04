@@ -124,7 +124,6 @@
     }
 
     function processPlayerData(csvData) {
-      alert("in process player data");
       const rows = csvData.split("\n").slice(1); // Ignore the header
       const playersList = document.querySelector('#players-registered');
       const waitlistList = document.querySelector('#waitlist');
@@ -136,9 +135,8 @@
           const guest = details[2].trim() === 'Yes'; // Assuming 'Yes' or 'No' for guests
           const playerEntry = document.createElement('li');
           playerEntry.textContent = name;
-        alert("name: " + name);
   
-          if (index < 36) {
+          if (index < 10) {
               playersList.appendChild(playerEntry);
           } else {
               waitlistList.appendChild(playerEntry);
