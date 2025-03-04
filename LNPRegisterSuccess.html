@@ -130,11 +130,12 @@
   
       rows.forEach((row, index) => {
           const details = row.split(",");
+          const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString(); // Formatting the timestamp
           const name = details[1].replace(/^"|"$/g, ''); // Remove any quotes that may be wrapped around the data
           const guest = details[2].trim() === 'Yes'; // Assuming 'Yes' or 'No' for guests
           const playerEntry = document.createElement('li');
-          playerEntry.textContent = name;
-  
+          playerEntry.textContent = `${timestamp} - ${name}`;
+        
           if (index < 10) {
               playersList.appendChild(playerEntry);
           } else {
@@ -143,7 +144,7 @@
 
           if (guest) {
               const guestEntry = document.createElement('li');
-              guestEntry.textContent = name;
+              guestEntry.textContent = `${timestamp} - ${name}`;
               guestsList.appendChild(guestEntry);
           }
       });
