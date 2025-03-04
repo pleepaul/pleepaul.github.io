@@ -16,11 +16,6 @@
       color: #333;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      flex-direction: column;
     }
     h1 {
       text-align: center;
@@ -34,8 +29,8 @@
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      width: 90%; /* Increased width percentage */
-      max-width: 500px; /* Increased max-width */
+      width: 50%; /* Adjusted width */
+      margin: 30px auto;
       padding: 20px;
       box-sizing: border-box;
     }
@@ -54,6 +49,7 @@
       border: 1px solid #ddd;
       border-radius: 5px;
       font-size: 16px;
+      box-sizing: border-box;
     }
     .btn-primary {
       background-color: #FFCC00;
@@ -74,8 +70,9 @@
       margin-left: 8px; /* Align text with checkbox */
     }
     .container {
-      width: 95%; /* Allows for some margin on very small devices */
-      max-width: none; /* Removes the max-width constraint */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
     .select2-container {
       width: 100% !important; /* Ensuring Select2 is responsive */
@@ -83,12 +80,6 @@
     #guestNameGroup {
       display: none; /* Initially hidden */
       margin-top: 10px;
-    }
-    @media (max-width: 768px) { /* Responsive settings for tablets and below */
-      form {
-        width: 95%; /* Make the form take almost full width */
-        max-width: none; /* Allows the form to expand */
-      }
     }
   </style>
 </head>
