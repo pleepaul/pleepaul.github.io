@@ -8,79 +8,86 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-image: url('https://pickleballsuperstore.com/cdn/shop/articles/A_close_up_of_a_pickleball_on_a_court._1200x.jpg?v=1708590727');
-      background-size: cover;
-      background-attachment: fixed;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      text-align: center;
-      color: #fff;
-      background-color: rgba(0, 128, 0, 0.8);
-      padding: 10px;
-      margin: 0;
-      font-size: 2.5em;
-    }
-    form {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      width: 50%; /* Adjusted width */
-      margin: 30px auto;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1em;
-    }
-    select, input[type="checkbox"], input[type="submit"], input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
-    .btn-primary {
-      background-color: #FFCC00;
-      color: #333;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .btn-primary:hover {
-      background-color: #FFD633;
+  body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://pickleballsuperstore.com/cdn/shop/articles/A_close_up_of_a_pickleball_on_a_court._1200x.jpg?v=1708590727');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full viewport height */
+  }
+  h1 {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 128, 0, 0.8);
+    padding: 10px;
+    margin: 0;
+    font-size: 2.5em;
+  }
+  form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ensures full width on smaller screens */
+    max-width: 500px; /* Limits max width for larger screens */
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding and border in the width */
+  }
+  .form-group, .checkbox-group {
+    margin-bottom: 20px;
+  }
+  label, .checkbox-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  select, input[type="checkbox"], input[type="submit"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .btn-primary {
+    background-color: #FFCC00;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btn-primary:hover {
+    background-color: #FFD633;
+  }
+  .checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack checkbox and label vertically on small screens */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+  }
+  .checkbox-label {
+    margin-left: 8px;
+    align-self: flex-start; /* Ensures label alignment is consistent */
+  }
+  .container {
+    width: 95%; /* Gives a little padding around the form */
+    max-width: 600px; /* Maximum width of the container */
+  }
+  @media (max-width: 600px) {
+    .container, form {
+      width: 90%; /* Allows for a bit more responsive padding */
     }
     .checkbox-group {
-      display: inline-flex;
-      align-items: center;
-      margin-bottom: 20px;
+      flex-direction: row; /* Aligns checkbox and label inline on smaller screens */
     }
-    .checkbox-label {
-      margin-left: 8px; /* Align text with checkbox */
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-    .select2-container {
-      width: 100% !important; /* Ensuring Select2 is responsive */
-    }
-    #guestNameGroup {
-      display: none; /* Initially hidden */
-      margin-top: 10px;
-  </style>
+  }
+</style>
+
 </head>
 <body>
   <h1>Late Night Pickle Registration</h1>
