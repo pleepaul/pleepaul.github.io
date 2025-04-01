@@ -136,7 +136,7 @@
       let count = 1;
       rows.slice(start, start + max).forEach((row, index) => {
         const details = row.split(",");
-        const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
+        const timestamp = new Date(details[2].replace(/^"|"$/g, '')).toLocaleString();
         const name = details[1].replace(/^"|"$/g, '');
   
         const rowElement = table.insertRow(-1);
@@ -154,7 +154,7 @@
       let count = 1;
       rows.forEach(row => {
         const details = row.split(",");
-        const timestamp = new Date(details[3].replace(/^"|"$/g, '')).toLocaleString();
+        const timestamp = new Date(details[2].replace(/^"|"$/g, '')).toLocaleString();
         const name = details[1].replace(/^"|"$/g, ''); // Player's name
         const guest = details[2].trim() === 'Yes'; // Checking if guest
         const guestName = details[4].replace(/^"|"$/g, ''); // Guest's name
