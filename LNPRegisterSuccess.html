@@ -135,6 +135,7 @@
       const table = document.querySelector(selector);
       let count = 1;
       rows.slice(start, start + max).forEach((row, index) => {
+        if (!row.trim()) return; // Skip blank rows
         const details = row.split(",");
         const timestamp = new Date(details[2].replace(/^"|"$/g, '')).toLocaleString();
         const name = details[1].replace(/^"|"$/g, '');
@@ -153,6 +154,7 @@
       const table = document.querySelector(selector);
       let count = 1;
       rows.forEach(row => {
+        if (!row.trim()) return; // Skip blank rows
         const details = row.split(",");
         const timestamp = new Date(details[2].replace(/^"|"$/g, '')).toLocaleString();
         const name = details[1].replace(/^"|"$/g, ''); // Player's name
