@@ -137,6 +137,7 @@
       rows.slice(start, start + max).forEach((row, index) => {
         if (!row.trim()) return; // Skip blank rows
         const details = row.split(",");
+        if (details.length < 2 || !details[1].trim()) return; // Skip if essential data is missing
         const timestamp = new Date(details[2].replace(/^"|"$/g, '')).toLocaleString();
         const name = details[1].replace(/^"|"$/g, '');
   
