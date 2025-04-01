@@ -156,7 +156,7 @@
         const details = row.split(",");
         const timestamp = new Date(details[2].replace(/^"|"$/g, '')).toLocaleString();
         const name = details[1].replace(/^"|"$/g, ''); // Player's name
-        const guest = details[2].trim() === 'Yes'; // Checking if guest
+        const guest = details[3].trim() === 'Yes'; // Checking if guest
         const guestName = details[4].replace(/^"|"$/g, ''); // Guest's name
   
         if (guest && guestName) {
